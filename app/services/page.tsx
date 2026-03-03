@@ -1,0 +1,183 @@
+import type { Metadata } from "next";
+import Image from "next/image";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+import PodcastAppearances from "../components/PodcastAppearances";
+import Testimonials from "../components/Testimonials";
+import PodcastersChecklist from "../components/PodcastersChecklist";
+
+export const metadata: Metadata = {
+  title: "Services | Heidy De La Cruz – Podcast Coach",
+  description: "Podcast coaching, copywriting, course, and blog services to help you launch and grow your podcast.",
+};
+
+const services = [
+  {
+    title: "Launching a Podcast",
+    price: "Starts at $397",
+    description:
+      "Have you been putting off starting your podcast for years? You have a story to tell and there are people needing to hear it! Don't put off starting your show any longer — as your podcast coach, this course will walk you through every step of getting your show up and launched!",
+    buttonText: "Take the Course",
+    buttonHref: "https://stan.store",
+    image: "/images/services-hero.jpg",
+    imagePosition: "object-top",
+  },
+  {
+    title: "Personalized Coaching",
+    price: "Starts at $697",
+    description:
+      "This is a 6-week package with me where I walk you through starting, launching, or helping you grow your podcast. We'll build a strategy tailored to you and your audience so you can show up with confidence.",
+    buttonText: "Learn More",
+    buttonHref: "https://calendly.com",
+    image: "/images/hero-photo.png",
+    imagePosition: "object-top",
+  },
+  {
+    title: "Copywriting",
+    price: "Starts at $497",
+    description:
+      "Whether you need a wordsmith to overhaul your website or just a few headlines for your next ad campaign, I got you covered. I'll work with you to understand the goals of your project and the minds of your customers. Together, we'll make your next project a success.",
+    buttonText: "Learn More",
+    buttonHref: "https://calendly.com",
+    image: "/images/about-photo.jpg",
+    imagePosition: "object-top",
+  },
+  {
+    title: "Blog Posts for Podcast Episodes",
+    price: "Starts at $497",
+    description:
+      "SEO-optimized blog posts for each of your podcast episodes is one of the best ways to market your podcast. As an SEO expert, I know exactly how to format each blog post to rank on search engines like Google.",
+    buttonText: "Learn More",
+    buttonHref: "https://calendly.com",
+    image: "/images/services-photo.png",
+    imagePosition: "object-top",
+  },
+];
+
+const testimonials = [
+  {
+    quote:
+      "This coaching was everything I needed and more to start this journey. It's been something I've been building up to do for a little over a year, and we were able to map out and simplify the process in six weeks.",
+    name: "Brandell T.",
+  },
+  {
+    quote:
+      "I got this wild idea to do a podcast, and then the universe sent me Heidy! She was personable, organized, and super supportive. Working with her made the whole process fun and achievable.",
+    name: "Kimberly Cline",
+  },
+  {
+    quote:
+      "Heidy made launching my podcast so much less intimidating. She broke everything down step by step and was always available to answer my questions. Couldn't recommend her enough!",
+    name: "Casey",
+  },
+  {
+    quote:
+      "Heidy is a knowledgeable and engaging host who answered many of my questions about podcasting. Her insights helped me understand the process and feel confident about starting my own show.",
+    name: "Andrea D.",
+  },
+];
+
+export default function ServicesPage() {
+  return (
+    <>
+      <Navbar />
+
+      {/* Hero */}
+      <section className="py-24 lg:py-32 bg-white">
+        <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
+          <div className="w-20 h-1 bg-brand-red mx-auto mb-8"></div>
+          <h1 className="font-serif text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight mb-6">
+            Let's Make <span className="italic text-brand-red">Podcasting</span> Your Next Adventure!
+          </h1>
+          <p className="text-lg lg:text-xl text-gray-700 max-w-2xl mx-auto mb-10">
+            If the chaos of online marketing has left you feeling lost and overlooked, it's time to transform your approach. This is where I come in. As your podcast coach, I specialize in simplifying the podcasting journey, turning your pain points into powerful stepping stones toward success.
+          </p>
+          {/* Hero image */}
+          <div className="relative aspect-video w-full max-w-2xl mx-auto rounded-lg overflow-hidden">
+            <Image
+              src="/images/services-hero.jpg"
+              alt="Heidy De La Cruz – Podcast Coach"
+              fill
+              className="object-cover"
+              priority
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* Services Cards */}
+      <section className="py-20 lg:py-28 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <div className="w-20 h-1 bg-brand-red mx-auto mb-6"></div>
+            <h2 className="font-serif text-3xl lg:text-4xl font-bold">
+              How Can I <span className="italic text-brand-red">Help</span> You?
+            </h2>
+          </div>
+
+          <div className="grid sm:grid-cols-2 gap-8">
+            {services.map((service) => (
+              <div
+                key={service.title}
+                className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow flex flex-col"
+              >
+                <div className="relative aspect-video">
+                  <Image
+                    src={service.image}
+                    alt={service.title}
+                    fill
+                    className={`object-cover ${service.imagePosition ?? "object-center"}`}
+                  />
+                </div>
+                <div className="p-8 flex flex-col flex-1">
+                  <div className="flex items-start justify-between gap-4 mb-4">
+                    <h3 className="font-serif text-2xl font-bold">{service.title}</h3>
+                    <span className="flex-shrink-0 bg-brand-red text-white text-sm font-medium px-3 py-1 rounded-full">
+                      {service.price}
+                    </span>
+                  </div>
+                  <p className="text-gray-700 leading-relaxed flex-1 mb-8">
+                    {service.description}
+                  </p>
+                  <a
+                    href={service.buttonHref}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block self-start bg-brand-red text-white px-8 py-3 rounded-md hover:bg-brand-dark transition-colors font-medium"
+                  >
+                    {service.buttonText}
+                  </a>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <Testimonials testimonials={testimonials} />
+
+      <PodcastersChecklist />
+
+      <PodcastAppearances />
+
+      {/* Final CTA */}
+      <section className="py-24 lg:py-32 bg-white">
+        <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
+          <h2 className="font-serif text-4xl lg:text-6xl font-bold mb-12">
+            Starting a podcast shouldn't be so hard, I'll show you how.
+          </h2>
+          <a
+            href="https://calendly.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block bg-brand-red text-white px-12 py-5 rounded-md hover:bg-brand-dark transition-colors font-medium text-xl"
+          >
+            Book A Call with Heidy
+          </a>
+        </div>
+      </section>
+
+      <Footer />
+    </>
+  );
+}
