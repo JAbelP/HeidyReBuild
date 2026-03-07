@@ -43,9 +43,7 @@ export default function AboutPage() {
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <a
-              href="https://calendly.com"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="mailto:heidy@heidydelacruz.com"
               className="bg-white text-brand-red px-8 py-4 rounded-md hover:bg-gray-100 transition-colors font-medium text-lg"
             >
               Request a consultation
@@ -70,9 +68,10 @@ export default function AboutPage() {
             Welcome! I'm <span className="italic text-brand-red">Heidy</span>
           </h2>
           <p className="text-lg lg:text-xl text-gray-700 leading-relaxed">
-            I'm a copywriter, speaker, and your dedicated podcast coach. Through my podcast{" "}
-            <span className="font-semibold">"The American Dream In The Eyes of Immigrants,"</span>{" "}
-            I amplify stories that deserve to be heard — and now I'm here to help you share yours.
+            I'm a writer, podcaster, podcast launch coach, and speaker. Hosting the rapidly
+            growing podcast, "The American Dream In The Eyes of Immigrants," is not just a
+            passion; it's a mission. Through heartfelt conversations, I speak with immigrants,
+            highlighting their journeys and holding them with compassion.
           </p>
         </div>
       </section>
@@ -88,16 +87,78 @@ export default function AboutPage() {
                 About <span className="italic text-brand-red">Me</span>
               </h2>
               <p className="text-lg text-gray-700 leading-relaxed">
-                As the daughter of Dominican immigrants, I bring a unique perspective to my multifaceted career. With a Master's Degree in Healthcare Administration and a Bachelor's Degree in Psychology and Healthcare Administration, my background provides a solid foundation for understanding human stories.
+                Hi, I'm Heidy De La Cruz 👋<br />
+                I'm a writer, podcaster, podcast-launch coach, speaker, and storyteller, passionate about amplifying voices that deserve to be heard.
               </p>
               <p className="text-lg text-gray-700 leading-relaxed">
-                I am a published poet, author of <span className="font-semibold">"Words From The Heart,"</span> and curator of the weekly Substack newsletter, <span className="font-semibold">"Into My Thoughts,"</span> where I share personal experiences, life lessons, and faith-based insights.
+                For more than 20 years, writing has been part of my life. What started as a hobby slowly became a calling. I've always believed stories have power, especially the stories of people who are often overlooked or underrepresented.
               </p>
               <p className="text-lg text-gray-700 leading-relaxed">
-                I am the founder of <span className="font-semibold">De La Cruz Media</span>, a thriving company offering services as a copywriter, speaker, and, most notably, a highly sought-after Podcast Coach. My podcasting expertise lies not only in its technicalities but in the art of compassionate storytelling.
+                Today, that belief fuels everything I create.
               </p>
               <p className="text-lg text-gray-700 leading-relaxed">
-                Whether you're seeking captivating copy, a dynamic speaker, or guidance on launching and growing your podcast, I bring a wealth of experience and a unique perspective to every endeavor.
+                <strong>Why I Started My Podcast</strong><br />
+                I'm the host of the award-winning podcast <em>The American Dream in the Eyes of Immigrants</em>, where I share the powerful journeys of immigrants who came to the United States in search of opportunity, safety, and a better future.
+              </p>
+              <p className="text-lg text-gray-700 leading-relaxed">
+                Through these conversations, I explore what the American Dream truly means — not through headlines or politics, but through real human experiences.
+              </p>
+              <p className="text-lg text-gray-700 leading-relaxed">
+                The podcast has grown far beyond what I imagined. It's now listened to in over 100 countries and ranked in the top 5% globally, ranking number 1 constantly for immigration on GoodPods, reaching the Top 100 monthly and Top 10 weekly charts multiple times.
+              </p>
+              <p className="text-lg text-gray-700 leading-relaxed">
+                But the numbers are only part of the story. What matters most to me is creating a space where immigrants can share their journeys openly — the struggles, the sacrifices, the culture shock, the wins, and the dreams that brought them here.
+              </p>
+              <p className="text-lg text-gray-700 leading-relaxed">
+                Because every immigrant story deserves to be told. And as the daughter of Dominican immigrants, I bring a unique perspective to how I handle these stories and podcasting.
+              </p>
+              <p className="text-lg text-gray-700 leading-relaxed">
+                <strong>My Work as a Podcast Launch Strategist</strong><br />
+                Alongside storytelling, I also help Latinas become podcasters with confidence and clarity, without the overwhelm.
+              </p>
+              <p className="text-lg text-gray-700 leading-relaxed">
+                Podcasting changed my life. It gave me a platform, a global audience, and opportunities I never expected.
+              </p>
+              <p className="text-lg text-gray-700 leading-relaxed">
+                Now I teach others how to do the same through my V.O.I.C.E. Method Podcast Launch Framework, where I walk through the entire process — from finding your "why" to choosing equipment, recording your first episode, creating systems, and marketing your show.
+              </p>
+              <p className="text-lg text-gray-700 leading-relaxed">
+                I believe podcasting doesn't have to be overwhelming and shouldn't be. With the right strategy and systems, it is one of the most powerful tools for building your brand, growing your audience, and creating meaningful connections.
+              </p>
+              <p className="text-lg text-gray-700 leading-relaxed">
+                <strong>My Mission</strong><br />
+                My mission is simple:
+              </p>
+              <ul className="list-disc list-inside text-lg text-gray-700 space-y-1">
+                <li>Tell stories that matter.</li>
+                <li>Help Latinas share their voices.</li>
+                <li>Create spaces where authenticity is valued more than perfection.</li>
+              </ul>
+              <p className="text-lg text-gray-700 leading-relaxed">
+                Whether I'm writing, interviewing immigrants, or teaching someone how to launch their podcast, everything I do centers around one idea: Stories connect us.
+              </p>
+              <p className="text-lg text-gray-700 leading-relaxed">
+                <strong>When I'm Not Podcasting</strong><br />
+                When I'm not recording episodes or writing blog posts about podcasting and storytelling, you'll usually find me:
+              </p>
+              <ul className="list-disc list-inside text-lg text-gray-700 space-y-1">
+                <li>Writing for my weekly personal development newsletter, <em>Into My Thoughts</em></li>
+                <li>Connecting with fellow creators and entrepreneurs</li>
+                <li>Speaking at networking events or podcasting conferences</li>
+                <li>Dreaming up new ways to grow my podcast and amplify immigrant stories</li>
+              </ul>
+              <p className="text-lg text-gray-700 leading-relaxed">
+                My long-term goal is to travel and record immigrant stories in person around the country, continuing to document the many versions of the American Dream.
+              </p>
+              <p className="text-lg text-gray-700 leading-relaxed">
+                <strong>Let's Connect</strong><br />
+                If you're an immigrant with a story to share, an entrepreneur who wants to start a podcast, or someone who simply believes in the power of storytelling, I'd love to connect.
+              </p>
+              <p className="text-lg text-gray-700 leading-relaxed">
+                Because the stories we share today can inspire the people who come after us tomorrow.
+              </p>
+              <p className="text-lg text-gray-700 leading-relaxed">
+                With Love, Heidy
               </p>
             </div>
 
@@ -124,12 +185,10 @@ export default function AboutPage() {
             Let's start your own podcast today!
           </h2>
           <a
-            href="https://calendly.com"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="mailto:heidy@heidydelacruz.com"
             className="inline-block bg-brand-red text-white px-12 py-5 rounded-md hover:bg-brand-dark transition-colors font-medium text-xl"
           >
-            Book a consultation
+            Let's Start Your Podcast
           </a>
         </div>
       </section>

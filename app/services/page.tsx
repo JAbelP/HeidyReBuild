@@ -11,44 +11,59 @@ export const metadata: Metadata = {
   description: "Podcast coaching, copywriting, course, and blog services to help you launch and grow your podcast.",
 };
 
-const services = [
+type Service = {
+  title: string;
+  price: string;
+  description: string;
+  buttonText: string;
+  buttonHref: string;
+  isEmail: boolean;
+  image: string;
+  imagePosition: string;
+};
+
+const services: Service[] = [
   {
-    title: "Launching a Podcast",
-    price: "Starts at $397",
+    title: "6 Weeks Podcast Launch Strategy",
+    price: "$1,500",
     description:
-      "Have you been putting off starting your podcast for years? You have a story to tell and there are people needing to hear it! Don't put off starting your show any longer — as your podcast coach, this course will walk you through every step of getting your show up and launched!",
-    buttonText: "Take the Course",
-    buttonHref: "https://stan.store",
+      "We will meet weekly for an hour for six weeks. We will set up a day and time that works best for you. This is for you if you're looking to: Launch your podcast but want guidance and weekly feedback. 1:1 weekly support and accountability for launching your podcast. Ready to take action but need extra support.",
+    buttonText: "Book Now",
+    buttonHref: "mailto:heidy@heidydelacruz.com",
+    isEmail: true,
     image: "/images/services-hero.jpg",
     imagePosition: "object-top",
   },
   {
-    title: "Personalized Coaching",
-    price: "Starts at $697",
+    title: "One Hour Podcast Strategy Call",
+    price: "$70",
     description:
-      "This is a 6-week package with me where I walk you through starting, launching, or helping you grow your podcast. We'll build a strategy tailored to you and your audience so you can show up with confidence.",
-    buttonText: "Learn More",
-    buttonHref: "https://calendly.com",
+      "In one hour, we will strategize your next steps in podcasting! Whether growing or starting your show!",
+    buttonText: "Book a Call",
+    buttonHref: "https://stan.store/heidydelacruz/p/book-a-11-call-with-me-hj62a",
+    isEmail: false,
     image: "/images/hero-photo.png",
     imagePosition: "object-top",
   },
   {
-    title: "Copywriting",
-    price: "Starts at $497",
+    title: "The V.O.I.C.E. Method Podcast Launch Course",
+    price: "$197",
     description:
-      "Whether you need a wordsmith to overhaul your website or just a few headlines for your next ad campaign, I got you covered. I'll work with you to understand the goals of your project and the minds of your customers. Together, we'll make your next project a success.",
-    buttonText: "Learn More",
-    buttonHref: "https://calendly.com",
+      "Become a podcaster in 6-weeks or less with The V.O.I.C.E. Method!",
+    buttonText: "Enroll Now",
+    buttonHref: "https://stan.store/heidydelacruz/p/launch-your-podcast-with-this-amazing-course",
+    isEmail: false,
     image: "/images/about-photo.jpg",
     imagePosition: "object-top",
   },
   {
-    title: "Blog Posts for Podcast Episodes",
-    price: "Starts at $497",
+    title: "Podcast Editing and Production Services",
+    price: "Starting at $80/episode",
     description:
-      "SEO-optimized blog posts for each of your podcast episodes is one of the best ways to market your podcast. As an SEO expert, I know exactly how to format each blog post to rank on search engines like Google.",
-    buttonText: "Learn More",
-    buttonHref: "https://calendly.com",
+      "Looking to take podcast management, editing, or production off your plate? Send me an email to discuss your podcasting needs. I'll tailor a package just for you!",
+    buttonText: "Email Heidy",
+    buttonHref: "mailto:heidy@heidydelacruz.com",
+    isEmail: true,
     image: "/images/services-photo.png",
     imagePosition: "object-top",
   },
@@ -141,8 +156,7 @@ export default function ServicesPage() {
                   </p>
                   <a
                     href={service.buttonHref}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    {...(!service.isEmail && { target: "_blank", rel: "noopener noreferrer" })}
                     className="inline-block self-start bg-brand-red text-white px-8 py-3 rounded-md hover:bg-brand-dark transition-colors font-medium"
                   >
                     {service.buttonText}

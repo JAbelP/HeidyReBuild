@@ -46,7 +46,7 @@ export default function Home() {
             <div className="order-1 lg:order-2 space-y-8">
               <div className="w-20 h-1 bg-brand-red"></div>
               <h1 className="font-serif text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight">
-                Elevate Your Online Presence with Podcasting
+                Helping Latinas become Podcasters with The V.O.I.C.E Method
               </h1>
               <p className="text-lg lg:text-xl text-gray-700 max-w-xl">
                 Ready to break the internet without breaking a sweat? Let's turn your digital presence into a podcasting sensation!

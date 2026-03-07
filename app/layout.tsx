@@ -15,7 +15,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Heidy De La Cruz | Podcast Coach",
+  title: "Heidy De La Cruz | Podcast Coach for Latinas",
   description: "Elevate Your Online Presence with Podcasting. Transform your digital presence into a podcasting sensation with expert coaching from Heidy De La Cruz.",
   keywords: ["podcast coach", "podcasting", "content creator", "online presence", "digital marketing"],
 };
