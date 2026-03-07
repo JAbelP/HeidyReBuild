@@ -29,8 +29,8 @@ const services: Service[] = [
     description:
       "We will meet weekly for an hour for six weeks. We will set up a day and time that works best for you. This is for you if you're looking to: Launch your podcast but want guidance and weekly feedback. 1:1 weekly support and accountability for launching your podcast. Ready to take action but need extra support.",
     buttonText: "Book Now",
-    buttonHref: "mailto:heidy@heidydelacruz.com",
-    isEmail: true,
+    buttonHref: "https://stan.store/heidydelacruz/p/11-coaching-to-launch-your-podcast",
+    isEmail: false,
     image: "/images/services-hero.jpg",
     imagePosition: "object-top",
   },
@@ -40,8 +40,8 @@ const services: Service[] = [
     description:
       "In one hour, we will strategize your next steps in podcasting! Whether growing or starting your show!",
     buttonText: "Book a Call",
-    buttonHref: "https://stan.store/heidydelacruz/p/book-a-11-call-with-me-hj62a",
-    isEmail: false,
+    buttonHref: "mailto:heidy@heidydelacruz.com",
+    isEmail: true,
     image: "/images/hero-photo.png",
     imagePosition: "object-top",
   },
@@ -181,9 +181,7 @@ export default function ServicesPage() {
             Starting a podcast shouldn't be so hard, I'll show you how.
           </h2>
           <a
-            href="https://calendly.com"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="mailto:heidy@heidydelacruz.com"
             className="inline-block bg-brand-red text-white px-12 py-5 rounded-md hover:bg-brand-dark transition-colors font-medium text-xl"
           >
             Book A Call with Heidy

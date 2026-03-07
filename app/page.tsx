@@ -285,9 +285,7 @@ export default function Home() {
             Starting a podcast shouldn't be so hard, I'll show you how.
           </h2>
           <a
-            href="https://calendly.com"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="mailto:heidy@heidydelacruz.com"
             className="inline-block bg-brand-red text-white px-12 py-5 rounded-md hover:bg-brand-dark transition-colors font-medium text-xl"
           >
             Book A Call with Heidy

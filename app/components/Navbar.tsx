@@ -45,12 +45,12 @@ export default function Navbar() {
                 {link.label}
               </Link>
             ))}
-            <Link
-              href="/contact"
+            <a
+              href="mailto:heidy@heidydelacruz.com"
               className="bg-brand-red text-white px-6 py-2.5 rounded-md hover:bg-brand-dark transition-colors font-medium"
             >
               Book a Call
-            </Link>
+            </a>
           </div>
 
           {/* Mobile menu button */}
@@ -84,13 +84,13 @@ export default function Navbar() {
                 {link.label}
               </Link>
             ))}
-            <Link
-              href="/contact"
+            <a
+              href="mailto:heidy@heidydelacruz.com"
               className="inline-block bg-brand-red text-white px-6 py-2.5 rounded-md hover:bg-brand-dark transition-colors font-medium mt-2"
               onClick={() => setMobileOpen(false)}
             >
               Book a Call
-            </Link>
+            </a>
           </div>
         )}
       </div>

@@ -9,7 +9,9 @@ export default function PodcastersChecklist() {
           If you are feeling overwhelmed with the process of starting your podcast here's a mini checklist to help you on your way.
         </p>
         <a
-          href="#subscribe"
+          href="https://mailchi.mp/3e49ffb0968d/podcastcoachingnewsletter"
+          target="_blank"
+          rel="noopener noreferrer"
           className="inline-block bg-brand-red text-white px-10 py-4 rounded-md hover:bg-brand-dark transition-colors font-medium text-lg"
         >
           Subscribe
