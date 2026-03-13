@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import PodcastAppearances from "./components/PodcastAppearances";
 import Testimonials from "./components/Testimonials";
 import PodcastersChecklist from "./components/PodcastersChecklist";
 
@@ -33,7 +32,7 @@ export default function Home() {
             <div className="order-2 lg:order-1 relative">
               <div className="relative aspect-[3/4] w-full max-w-md mx-auto">
                 <Image
-                  src="/images/hero-photo.png"
+                  src="/images/HDLC4704.jpg"
                   alt="Heidy De La Cruz - Hero Photo"
                   fill
                   className="object-cover"
@@ -90,7 +89,7 @@ export default function Home() {
               <div className="absolute -left-8 -top-8 w-full h-full bg-brand-red opacity-20 rounded-lg -z-10"></div>
               <div className="relative aspect-[3/4] w-full max-w-md mx-auto">
                 <Image
-                  src="/images/about-photo.jpg"
+                  src="/images/RE9A0715_(2048).jpg"
                   alt="Heidy De La Cruz - About Photo"
                   fill
                   className="object-cover rounded-lg"
@@ -123,7 +122,6 @@ export default function Home() {
         </div>
       </section>
 
-      <PodcastAppearances />
 
       {/* So What's the Scoop Section */}
       <section className="py-24 lg:py-32 bg-gradient-to-br from-brand-dark to-brand-red text-white">
@@ -132,7 +130,7 @@ export default function Home() {
             {/* Left - Content */}
             <div className="space-y-6">
               <h2 className="font-serif text-4xl lg:text-5xl font-bold">
-                So, What's the Scoop On Me?
+                What's Holding you Back from Starting?
               </h2>
               <div className="space-y-4 text-lg leading-relaxed">
                 <p>
@@ -146,10 +144,12 @@ export default function Home() {
                 </p>
               </div>
               <a
-                href="#services"
+                href="https://quiz.tryinteract.com/#/69779e8fd55a23ed54af415e"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-block border-2 border-white text-white px-8 py-4 rounded-md hover:bg-white hover:text-brand-red transition-colors font-medium text-lg mt-4"
               >
-                Learn More
+                Take The Quiz
               </a>
             </div>
 
@@ -158,7 +158,7 @@ export default function Home() {
               <div className="grid grid-cols-2 gap-4">
                 <div className="relative aspect-square">
                   <Image
-                    src="/images/collage-1.png"
+                    src="/images/HDLC4789.jpg"
                     alt="Heidy De La Cruz - Collage Photo 1"
                     fill
                     className="object-cover rounded-lg"
@@ -288,7 +288,7 @@ export default function Home() {
             href="mailto:heidy@heidydelacruz.com"
             className="inline-block bg-brand-red text-white px-12 py-5 rounded-md hover:bg-brand-dark transition-colors font-medium text-xl"
           >
-            Book A Call with Heidy
+            Send Me An Email
           </a>
         </div>
       </section>

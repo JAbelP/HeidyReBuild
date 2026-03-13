@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import PodcastAppearances from "../components/PodcastAppearances";
 
 export const metadata: Metadata = {
   title: "Contact | Heidy De La Cruz – Podcast Coach",
@@ -14,21 +13,28 @@ export default function ContactPage() {
       <Navbar />
 
       {/* Hero */}
-      <section className="py-24 lg:py-32 bg-white text-center">
+      <section className="pt-16 pb-4 lg:pt-20 lg:pb-6 bg-white text-center">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="w-20 h-1 bg-brand-red mx-auto mb-8"></div>
           <h1 className="font-serif text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight mb-6">
             Let&apos;s Discuss{" "}
-            <span className="italic text-brand-red">Your Content Journey</span>
+            <span className="italic text-brand-red">Your Podcast Journey</span>
           </h1>
-          <p className="text-lg lg:text-xl text-gray-700 max-w-2xl mx-auto">
+          <p className="text-lg lg:text-xl text-gray-700 max-w-2xl mx-auto mb-6">
             Whether you&apos;re a business looking to amplify your brand or a coach exploring new marketing strategies, I&apos;m here to help you get started.
           </p>
+          <div className="w-full max-w-2xl mx-auto rounded-lg overflow-hidden">
+            <img
+              src="/images/HDLC4976.jpg"
+              alt="Heidy De La Cruz – Contact"
+              className="w-full h-auto object-cover object-top rounded-lg"
+            />
+          </div>
         </div>
       </section>
 
       {/* Who Is This For */}
-      <section className="py-20 lg:py-24 bg-white">
+      <section className="py-10 lg:py-14 bg-white">
         <div className="max-w-3xl mx-auto px-6 lg:px-8 text-center space-y-6">
           <p className="text-lg lg:text-xl text-gray-700 leading-relaxed">
             Are you a business looking to amplify your brand and increase service awareness?
@@ -97,7 +103,6 @@ export default function ContactPage() {
         </div>
       </section>
 
-      <PodcastAppearances />
 
       <Footer />
     </>

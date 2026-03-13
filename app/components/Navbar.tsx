@@ -13,7 +13,6 @@ export default function Navbar() {
     { label: "Home", href: "/" },
     { label: "About", href: "/about" },
     { label: "Services", href: "/services" },
-    { label: "Testimonials", href: isHome ? "#testimonials" : "/#testimonials" },
     { label: "Blog", href: "/blog" },
     { label: "Contact", href: "/contact" },
   ];
@@ -49,7 +48,7 @@ export default function Navbar() {
               href="mailto:heidy@heidydelacruz.com"
               className="bg-brand-red text-white px-6 py-2.5 rounded-md hover:bg-brand-dark transition-colors font-medium"
             >
-              Book a Call
+              Send an Email
             </a>
           </div>
 
@@ -89,7 +88,7 @@ export default function Navbar() {
               className="inline-block bg-brand-red text-white px-6 py-2.5 rounded-md hover:bg-brand-dark transition-colors font-medium mt-2"
               onClick={() => setMobileOpen(false)}
             >
-              Book a Call
+              Send an Email
             </a>
           </div>
         )}

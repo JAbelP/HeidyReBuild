@@ -40,9 +40,9 @@ const services: Service[] = [
     description:
       "In one hour, we will strategize your next steps in podcasting! Whether growing or starting your show!",
     buttonText: "Book a Call",
-    buttonHref: "mailto:heidy@heidydelacruz.com",
-    isEmail: true,
-    image: "/images/hero-photo.png",
+    buttonHref: "https://stan.store/heidydelacruz/p/book-a-11-call-with-me-hj62a",
+    isEmail: false,
+    image: "/images/HDLC4704.jpg",
     imagePosition: "object-top",
   },
   {
@@ -108,12 +108,12 @@ export default function ServicesPage() {
             If the chaos of online marketing has left you feeling lost and overlooked, it's time to transform your approach. This is where I come in. As your podcast coach, I specialize in simplifying the podcasting journey, turning your pain points into powerful stepping stones toward success.
           </p>
           {/* Hero image */}
-          <div className="relative aspect-video w-full max-w-2xl mx-auto rounded-lg overflow-hidden">
+          <div className="relative aspect-[4/3] w-full max-w-2xl mx-auto rounded-lg overflow-hidden">
             <Image
-              src="/images/services-hero.jpg"
+              src="/images/HDLC4829.jpg"
               alt="Heidy De La Cruz – Podcast Coach"
               fill
-              className="object-cover"
+              className="object-cover object-top"
               priority
             />
           </div>
@@ -172,7 +172,6 @@ export default function ServicesPage() {
 
       <PodcastersChecklist />
 
-      <PodcastAppearances />
 
       {/* Final CTA */}
       <section className="py-24 lg:py-32 bg-white">
@@ -184,7 +183,7 @@ export default function ServicesPage() {
             href="mailto:heidy@heidydelacruz.com"
             className="inline-block bg-brand-red text-white px-12 py-5 rounded-md hover:bg-brand-dark transition-colors font-medium text-xl"
           >
-            Book A Call with Heidy
+            Send Me An Email
           </a>
         </div>
       </section>
