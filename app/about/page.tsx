@@ -3,7 +3,6 @@ import Image from "next/image";
 import Link from "next/link";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import PodcastAppearances from "../components/PodcastAppearances";
 import Testimonials from "../components/Testimonials";
 
 export const metadata: Metadata = {
@@ -58,30 +57,50 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <PodcastAppearances />
+      
 
       {/* Welcome */}
-      <section className="py-20 lg:py-24 bg-white text-center">
-        <div className="max-w-3xl mx-auto px-6 lg:px-8">
-          <div className="w-20 h-1 bg-brand-red mx-auto mb-8"></div>
-          <h2 className="font-serif text-4xl lg:text-5xl font-bold mb-6">
-            Welcome! I'm <span className="italic text-brand-red">Heidy</span>
-          </h2>
-          <p className="text-lg lg:text-xl text-gray-700 leading-relaxed">
-            I'm a writer, podcaster, podcast launch coach, and speaker. Hosting the rapidly
-            growing podcast, "The American Dream In The Eyes of Immigrants," is not just a
-            passion; it's a mission. Through heartfelt conversations, I speak with immigrants,
-            highlighting their journeys and holding them with compassion.
-          </p>
+      <section className="py-20 lg:py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+            {/* Left – Image */}
+            <div className="relative">
+              <div className="absolute -left-6 -top-6 w-full h-full bg-brand-red opacity-10 rounded-lg -z-10"></div>
+              <div className="relative aspect-[3/4] w-full max-w-md mx-auto">
+                <Image
+                  src="/images/HDLC4984.jpg"
+                  alt="Heidy De La Cruz"
+                  fill
+                  className="object-cover rounded-lg"
+                  priority
+                />
+              </div>
+            </div>
+
+            {/* Right – Text */}
+            <div className="space-y-6">
+              <div className="w-20 h-1 bg-brand-red"></div>
+              <h2 className="font-serif text-4xl lg:text-5xl font-bold">
+                Welcome! I'm <span className="italic text-brand-red">Heidy</span>
+              </h2>
+              <p className="text-lg lg:text-xl text-gray-700 leading-relaxed">
+                I'm a writer, podcaster, podcast launch coach, and speaker. Hosting the rapidly
+                growing podcast, "The American Dream In The Eyes of Immigrants," is not just a
+                passion; it's a mission. Through heartfelt conversations, I speak with immigrants,
+                highlighting their journeys and holding them with compassion.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* About Me */}
-      <section className="py-20 lg:py-28 bg-gray-50">
+      <section className="py-20 lg:py-28 bg-gray-50 overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+          <div className="grid lg:grid-cols-[1fr_420px] gap-12 items-start">
+
             {/* Left – Content */}
-            <div className="space-y-6">
+            <div className="space-y-6 py-4 lg:pr-8">
               <div className="w-20 h-1 bg-brand-red"></div>
               <h2 className="font-serif text-4xl lg:text-5xl font-bold">
                 About <span className="italic text-brand-red">Me</span>
@@ -162,18 +181,46 @@ export default function AboutPage() {
               </p>
             </div>
 
-            {/* Right – Logo / Brand Image */}
-            <div className="relative flex items-center justify-center">
-              <div className="absolute -right-8 -bottom-8 w-48 h-48 bg-brand-red opacity-10 rounded-lg -z-10"></div>
-              <div className="relative aspect-square w-full max-w-sm mx-auto">
-                <Image
-                  src="/images/de-la-cruz-media-logo.png"
-                  alt="De La Cruz Media – Heidy De La Cruz Podcast Coach"
-                  fill
-                  className="object-contain rounded-lg"
-                />
+            {/* Right – Red Column sticky sidebar */}
+            <div className="hidden lg:block self-start sticky top-8">
+              <div className="bg-[#CC0000] rounded-2xl overflow-hidden shadow-2xl">
+                {/* Heidy photo */}
+                <div className="relative w-full" style={{aspectRatio: "4/5"}}>
+                  <Image
+                    src="/images/HDLC4829.jpg"
+                    alt="Heidy De La Cruz"
+                    fill
+                    className="object-cover"
+                  />
+                  {/* gradient overlay into red panel */}
+                  <div className="absolute inset-x-0 -bottom-7 h-full" style={{background: "linear-gradient(to top, #CC0000 0%, #CC0000 5%, transparent 20%)"}} />
+                </div>
+
+                {/* Content block */}
+                <div className="px-8 pb-8 -mt-4 flex flex-col gap-6">
+                  {/* Podcast cover */}
+                  <div className="relative w-full rounded-xl overflow-hidden shadow-lg" style={{aspectRatio: "1/1"}}>
+                    <Image
+                      src="/images/The American Dream in  The Eyes of Immigrants .png"
+                      alt="The American Dream in the Eyes of Immigrants podcast"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+
+                  {/* Award badge */}
+                  <div className="relative w-full rounded-xl overflow-hidden bg-black" style={{aspectRatio: "3/4"}}>
+                    <Image
+                      src="/images/Winner Digital Asset_WWP Awards 2025.png"
+                      alt="WWP Awards 2025 Winner"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                </div>
               </div>
             </div>
+
           </div>
         </div>
       </section>
