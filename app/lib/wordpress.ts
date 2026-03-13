@@ -1,4 +1,4 @@
-const WP_API = "https://heidydelacruz.com/wp-json/wp/v2";
+const WP_API = process.env.WORDPRESS_API_URL ?? "https://heidyreynoso.wpcomstaging.com/wp-json/wp/v2";
 
 export type WPPost = {
   id: number;
