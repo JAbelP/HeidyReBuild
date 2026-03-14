@@ -42,8 +42,6 @@ function PostCard({ post }: { post: WPPost }) {
   );
 }
 
-const WP_API = "https://heidydelacruz.com/wp-json/wp/v2";
-
 export default function BlogPostsGrid({
   initialPosts,
   totalPages,
@@ -60,7 +58,7 @@ export default function BlogPostsGrid({
     setLoading(true);
     try {
       const res = await fetch(
-        `${WP_API}/posts?_embed&per_page=6&page=${nextPage}&status=publish`
+        `/api/wp/posts?_embed&per_page=6&page=${nextPage}&status=publish`
       );
       if (res.ok) {
         const newPosts: WPPost[] = await res.json();

@@ -26,6 +26,11 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'secure.gravatar.com',
       },
+      {
+        protocol: 'http',
+        hostname: '147.93.114.21',
+        port: '8000',
+      },
     ],
   },
 };
