@@ -61,6 +61,8 @@ export default function BlogPostsGrid({
         `/api/wp/posts?_embed&per_page=6&page=${nextPage}&status=publish`
       );
       if (res.ok) {
+        const contentType = res.headers.get("Content-Type") ?? "";
+        if (!contentType.includes("json")) return;
         const newPosts: WPPost[] = await res.json();
         setPosts((prev) => [...prev, ...newPosts]);
         setPage(nextPage);

@@ -27,9 +27,8 @@ const nextConfig = {
         hostname: 'secure.gravatar.com',
       },
       {
-        protocol: 'http',
-        hostname: '147.93.114.21',
-        port: '8000',
+        protocol: 'https',
+        hostname: 'blog.heidydelacruz.com',
       },
     ],
   },

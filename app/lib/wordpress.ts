@@ -1,4 +1,4 @@
-const WP_API = process.env.NEXT_PUBLIC_WP_API_URL ?? "http://147.93.114.21:8000/wp-json/wp/v2";
+const WP_API = process.env.NEXT_PUBLIC_WP_API_URL ?? "https://blog.heidydelacruz.com/wp-json/wp/v2";
 
 export type WPPost = {
   id: number;
