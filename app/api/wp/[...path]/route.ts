@@ -12,7 +12,7 @@ export async function GET(
 
   try {
     const res = await fetch(upstreamUrl, {
-      cache: "no-store",
+      next: { revalidate: 604800 }, // 7 days
     });
 
     const body = await res.text();
