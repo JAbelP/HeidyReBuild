@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import Navbar from "../../components/Navbar";
-import Footer from "../../components/Footer";
-import { getPostBySlug, getFeaturedImage, getAuthorName, formatDate, getAllSlugs } from "../../lib/wordpress";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+import { getPostBySlug, getFeaturedImage, getAuthorName, formatDate, getAllSlugs } from "../lib/wordpress";
 
 export async function generateStaticParams() {
   const slugs = await getAllSlugs();

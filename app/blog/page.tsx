@@ -18,7 +18,7 @@ function PostCard({ post }: { post: WPPost }) {
 
   return (
     <article className="flex flex-col">
-      <Link href={`/blog/${post.slug}`} className="block overflow-hidden mb-4">
+      <Link href={`/${post.slug}`} className="block overflow-hidden mb-4">
         <div className="relative h-[350px] w-full overflow-hidden">
           <Image
             src={image}
@@ -33,12 +33,12 @@ function PostCard({ post }: { post: WPPost }) {
         <span>{date}</span>
       </div>
       <h3 className="font-serif text-xl font-bold text-gray-900 mb-4 leading-snug">
-        <Link href={`/blog/${post.slug}`} className="hover:text-brand-red transition-colors">
+        <Link href={`/${post.slug}`} className="hover:text-brand-red transition-colors">
           {post.title.rendered}
         </Link>
       </h3>
       <Link
-        href={`/blog/${post.slug}`}
+        href={`/${post.slug}`}
         className="text-brand-red font-medium text-sm border-b-2 border-brand-red pb-2 w-fit hover:text-brand-dark hover:border-brand-dark transition-colors mt-auto"
       >
         Read More
