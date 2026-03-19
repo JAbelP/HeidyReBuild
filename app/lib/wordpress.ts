@@ -21,7 +21,7 @@ export type WPPost = {
 export async function getPosts(perPage = 6, page = 1): Promise<WPPost[]> {
   const res = await fetch(
     `${WP_API}/posts?_embed&per_page=${perPage}&page=${page}&status=publish`,
-    { next: { revalidate: 604800 } }
+    { next: { revalidate: 86400, tags: ["wordpress"] } }
   );
   if (!res.ok) return [];
   return res.json();
@@ -30,7 +30,7 @@ export async function getPosts(perPage = 6, page = 1): Promise<WPPost[]> {
 export async function getTotalPages(perPage = 6): Promise<number> {
   const res = await fetch(
     `${WP_API}/posts?per_page=${perPage}&status=publish`,
-    { next: { revalidate: 604800 } }
+    { next: { revalidate: 86400, tags: ["wordpress"] } }
   );
   if (!res.ok) return 1;
   return Number(res.headers.get("X-WP-TotalPages") ?? 1);
@@ -39,7 +39,7 @@ export async function getTotalPages(perPage = 6): Promise<number> {
 export async function getAllSlugs(): Promise<string[]> {
   const res = await fetch(
     `${WP_API}/posts?per_page=100&status=publish&_fields=slug`,
-    { next: { revalidate: 604800 } }
+    { next: { revalidate: 86400, tags: ["wordpress"] } }
   );
   if (!res.ok) return [];
   const posts: Array<{ slug: string }> = await res.json();
@@ -49,7 +49,7 @@ export async function getAllSlugs(): Promise<string[]> {
 export async function getPostBySlug(slug: string): Promise<WPPost | null> {
   const res = await fetch(
     `${WP_API}/posts?_embed&slug=${slug}&status=publish`,
-    { next: { revalidate: 604800 } }
+    { next: { revalidate: 86400, tags: ["wordpress"] } }
   );
   if (!res.ok) return null;
   const posts: WPPost[] = await res.json();
