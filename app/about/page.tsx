@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Testimonials from "../components/Testimonials";
+import Button from "../components/Button";
+import SectionDivider from "../components/SectionDivider";
+import CtaSection from "../components/CtaSection";
 
 export const metadata: Metadata = {
   title: "About | Heidy De La Cruz – Podcast Coach",
@@ -33,7 +35,7 @@ export default function AboutPage() {
       {/* Hero */}
       <section className="py-24 lg:py-36 bg-gradient-to-br from-brand-dark via-brand-red to-brand-redLight text-white text-center">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
-          <div className="w-20 h-1 bg-white mx-auto mb-8 opacity-60"></div>
+          <SectionDivider center color="white" className="mb-8" />
           <h1 className="font-serif text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight mb-6">
             Let's get your Podcast Launched
           </h1>
@@ -41,23 +43,15 @@ export default function AboutPage() {
             Let's collaborate to bring your voice to the forefront of the podcasting world.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <a
-              href="mailto:heidy@heidydelacruz.com"
-              className="bg-white text-brand-red px-8 py-4 rounded-md hover:bg-gray-100 transition-colors font-medium text-lg"
-            >
+            <Button href="mailto:heidy@heidydelacruz.com" variant="white">
               Request a consultation
-            </a>
-            <Link
-              href="/services"
-              className="border-2 border-white text-white px-8 py-4 rounded-md hover:bg-white hover:text-brand-red transition-colors font-medium text-lg"
-            >
+            </Button>
+            <Button href="/services" variant="outline-white">
               Discover my services
-            </Link>
+            </Button>
           </div>
         </div>
       </section>
-
-      
 
       {/* Welcome */}
       <section className="py-20 lg:py-24 bg-white">
@@ -79,7 +73,7 @@ export default function AboutPage() {
 
             {/* Right – Text */}
             <div className="space-y-6">
-              <div className="w-20 h-1 bg-brand-red"></div>
+              <SectionDivider />
               <h2 className="font-serif text-4xl lg:text-5xl font-bold">
                 Welcome! I'm <span className="italic text-brand-red">Heidy</span>
               </h2>
@@ -101,7 +95,7 @@ export default function AboutPage() {
 
             {/* Left – Content */}
             <div className="space-y-6 py-4 lg:pr-8">
-              <div className="w-20 h-1 bg-brand-red"></div>
+              <SectionDivider />
               <h2 className="font-serif text-4xl lg:text-5xl font-bold">
                 About <span className="italic text-brand-red">Me</span>
               </h2>
@@ -225,20 +219,11 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-24 lg:py-32 bg-brand-black text-white">
-        <div className="max-w-3xl mx-auto px-6 lg:px-8 text-center">
-          <h2 className="font-serif text-4xl lg:text-5xl font-bold mb-10">
-            Let's start your own podcast today!
-          </h2>
-          <a
-            href="mailto:heidy@heidydelacruz.com"
-            className="inline-block bg-brand-red text-white px-12 py-5 rounded-md hover:bg-brand-dark transition-colors font-medium text-xl"
-          >
-            Let's Start Your Podcast
-          </a>
-        </div>
-      </section>
+      <CtaSection
+        heading="Let's start your own podcast today!"
+        buttonText="Let's Start Your Podcast"
+        bgColor="black"
+      />
 
       <Testimonials
         heading="Love Notes"

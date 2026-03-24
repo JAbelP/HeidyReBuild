@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import Button from "../components/Button";
+import SectionDivider from "../components/SectionDivider";
 
 export const metadata: Metadata = {
   title: "Contact | Heidy De La Cruz – Podcast Coach",
@@ -15,7 +17,7 @@ export default function ContactPage() {
       {/* Hero */}
       <section className="pt-16 pb-4 lg:pt-20 lg:pb-6 bg-white text-center">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
-          <div className="w-20 h-1 bg-brand-red mx-auto mb-8"></div>
+          <SectionDivider center className="mb-8" />
           <h1 className="font-serif text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight mb-6">
             Let&apos;s Discuss{" "}
             <span className="italic text-brand-red">Your Podcast Journey</span>
@@ -51,7 +53,7 @@ export default function ContactPage() {
       {/* Contact Options */}
       <section className="py-20 lg:py-24 bg-gray-50">
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
-          <div className="w-20 h-1 bg-brand-red mx-auto mb-8"></div>
+          <SectionDivider center className="mb-8" />
           <h2 className="font-serif text-4xl lg:text-5xl font-bold mb-4">
             Let&apos;s work together
           </h2>
@@ -70,14 +72,14 @@ export default function ContactPage() {
               <div>
                 <h3 className="font-serif text-2xl font-bold mb-2">Virtually</h3>
                 <p className="text-gray-600 mb-6">Zoom is my thing</p>
-                <a
+                <Button
                   href="https://calendly.com"
+                  size="md"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-block bg-brand-red text-white px-8 py-3 rounded-md hover:bg-brand-dark transition-colors font-medium"
                 >
                   Book a Consultation
-                </a>
+                </Button>
               </div>
             </div>
 
@@ -91,18 +93,14 @@ export default function ContactPage() {
               <div>
                 <h3 className="font-serif text-2xl font-bold mb-2">Email</h3>
                 <p className="text-gray-600 mb-6">Send me a message anytime</p>
-                <a
-                  href="mailto:heidy@heidydelacruz.com"
-                  className="inline-block bg-brand-red text-white px-8 py-3 rounded-md hover:bg-brand-dark transition-colors font-medium"
-                >
+                <Button href="mailto:heidy@heidydelacruz.com" size="md">
                   heidy@heidydelacruz.com
-                </a>
+                </Button>
               </div>
             </div>
           </div>
         </div>
       </section>
-
 
       <Footer />
     </>

@@ -3,6 +3,9 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Testimonials from "./components/Testimonials";
 import PodcastersChecklist from "./components/PodcastersChecklist";
+import Button from "./components/Button";
+import SectionDivider from "./components/SectionDivider";
+import CtaSection from "./components/CtaSection";
 
 const testimonials = [
   {
@@ -43,7 +46,7 @@ export default function Home() {
 
             {/* Right - Content */}
             <div className="order-1 lg:order-2 space-y-8">
-              <div className="w-20 h-1 bg-brand-red"></div>
+              <SectionDivider />
               <h1 className="font-serif text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight">
                 Helping Latinas become Podcasters with The V.O.I.C.E Method
               </h1>
@@ -51,18 +54,8 @@ export default function Home() {
                 Ready to break the internet without breaking a sweat? Let's turn your digital presence into a podcasting sensation!
               </p>
               <div className="flex flex-wrap gap-4">
-                <a
-                  href="#contact"
-                  className="bg-brand-red text-white px-8 py-4 rounded-md hover:bg-brand-dark transition-colors font-medium text-lg"
-                >
-                  Get In Touch
-                </a>
-                <a
-                  href="#about"
-                  className="border-2 border-brand-red text-brand-red px-8 py-4 rounded-md hover:bg-brand-red hover:text-white transition-colors font-medium text-lg"
-                >
-                  Learn More
-                </a>
+                <Button href="#contact">Get In Touch</Button>
+                <Button href="#about" variant="secondary">Learn More</Button>
               </div>
             </div>
           </div>
@@ -111,12 +104,7 @@ export default function Home() {
               <h3 className="text-2xl font-serif font-bold text-brand-red pt-4">
                 Let's Make Podcasting Your Next Adventure!
               </h3>
-              <a
-                href="#services"
-                className="inline-block bg-brand-red text-white px-8 py-4 rounded-md hover:bg-brand-dark transition-colors font-medium text-lg mt-4"
-              >
-                More About Me
-              </a>
+              <Button href="#services" className="mt-4">More About Me</Button>
             </div>
           </div>
         </div>
@@ -143,14 +131,15 @@ export default function Home() {
                   I believe in the transformative power of podcasting to build connections, share stories, and create impact. Let's work together to amplify your voice and make your mark in the podcasting world.
                 </p>
               </div>
-              <a
+              <Button
                 href="https://quiz.tryinteract.com/#/69779e8fd55a23ed54af415e"
+                variant="outline-white"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block border-2 border-white text-white px-8 py-4 rounded-md hover:bg-white hover:text-brand-red transition-colors font-medium text-lg mt-4"
+                className="mt-4"
               >
                 Take The Quiz
-              </a>
+              </Button>
             </div>
 
             {/* Right - Image Collage */}
@@ -248,12 +237,7 @@ export default function Home() {
                 </div>
               </div>
 
-              <a
-                href="#contact"
-                className="inline-block bg-brand-red text-white px-8 py-4 rounded-md hover:bg-brand-dark transition-colors font-medium text-lg mt-4"
-              >
-                Yes, I'm Ready!
-              </a>
+              <Button href="#contact" className="mt-4">Yes, I'm Ready!</Button>
             </div>
 
             {/* Right - Image */}
@@ -278,20 +262,9 @@ export default function Home() {
 
       <PodcastersChecklist />
 
-      {/* Final CTA Section */}
-      <section id="contact" className="py-24 lg:py-32 bg-white">
-        <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
-          <h2 className="font-serif text-4xl lg:text-6xl font-bold mb-12">
-            Starting a podcast shouldn't be so hard, I'll show you how.
-          </h2>
-          <a
-            href="mailto:heidy@heidydelacruz.com"
-            className="inline-block bg-brand-red text-white px-12 py-5 rounded-md hover:bg-brand-dark transition-colors font-medium text-xl"
-          >
-            Send Me An Email
-          </a>
-        </div>
-      </section>
+      <div id="contact">
+        <CtaSection heading="Starting a podcast shouldn't be so hard, I'll show you how." />
+      </div>
 
       <Footer />
     </>

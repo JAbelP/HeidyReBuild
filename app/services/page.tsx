@@ -2,9 +2,11 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import PodcastAppearances from "../components/PodcastAppearances";
 import Testimonials from "../components/Testimonials";
 import PodcastersChecklist from "../components/PodcastersChecklist";
+import Button from "../components/Button";
+import SectionDivider from "../components/SectionDivider";
+import CtaSection from "../components/CtaSection";
 
 export const metadata: Metadata = {
   title: "Services | Heidy De La Cruz – Podcast Coach",
@@ -100,7 +102,7 @@ export default function ServicesPage() {
       {/* Hero */}
       <section className="py-24 lg:py-32 bg-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
-          <div className="w-20 h-1 bg-brand-red mx-auto mb-8"></div>
+          <SectionDivider center className="mb-8" />
           <h1 className="font-serif text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight mb-6">
             Let's Make <span className="italic text-brand-red">Podcasting</span> Your Next Adventure!
           </h1>
@@ -124,7 +126,7 @@ export default function ServicesPage() {
       <section className="py-20 lg:py-28 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-16">
-            <div className="w-20 h-1 bg-brand-red mx-auto mb-6"></div>
+            <SectionDivider center className="mb-6" />
             <h2 className="font-serif text-3xl lg:text-4xl font-bold">
               How Can I <span className="italic text-brand-red">Help</span> You?
             </h2>
@@ -154,13 +156,14 @@ export default function ServicesPage() {
                   <p className="text-gray-700 leading-relaxed flex-1 mb-8">
                     {service.description}
                   </p>
-                  <a
+                  <Button
                     href={service.buttonHref}
+                    size="md"
                     {...(!service.isEmail && { target: "_blank", rel: "noopener noreferrer" })}
-                    className="inline-block self-start bg-brand-red text-white px-8 py-3 rounded-md hover:bg-brand-dark transition-colors font-medium"
+                    className="self-start"
                   >
                     {service.buttonText}
-                  </a>
+                  </Button>
                 </div>
               </div>
             ))}
@@ -172,21 +175,7 @@ export default function ServicesPage() {
 
       <PodcastersChecklist />
 
-
-      {/* Final CTA */}
-      <section className="py-24 lg:py-32 bg-white">
-        <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
-          <h2 className="font-serif text-4xl lg:text-6xl font-bold mb-12">
-            Starting a podcast shouldn't be so hard, I'll show you how.
-          </h2>
-          <a
-            href="mailto:heidy@heidydelacruz.com"
-            className="inline-block bg-brand-red text-white px-12 py-5 rounded-md hover:bg-brand-dark transition-colors font-medium text-xl"
-          >
-            Send Me An Email
-          </a>
-        </div>
-      </section>
+      <CtaSection heading="Starting a podcast shouldn't be so hard, I'll show you how." />
 
       <Footer />
     </>

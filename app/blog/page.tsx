@@ -3,49 +3,16 @@ import Image from "next/image";
 import Link from "next/link";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import { getPosts, getTotalPages, getFeaturedImage, getAuthorName, formatDate, type WPPost } from "../lib/wordpress";
+import PostCard from "../components/PostCard";
+import Button from "../components/Button";
+import SectionDivider from "../components/SectionDivider";
+import { getPosts, getTotalPages } from "../lib/wordpress";
 import BlogPostsGrid from "./BlogPostsGrid";
 
 export const metadata: Metadata = {
   title: "Blog | Heidy De La Cruz – Podcast Coach",
   description: "Read the latest articles on podcasting, storytelling, and content strategy from Heidy De La Cruz.",
 };
-
-function PostCard({ post }: { post: WPPost }) {
-  const image = getFeaturedImage(post);
-  const author = getAuthorName(post);
-  const date = formatDate(post.date);
-
-  return (
-    <article className="flex flex-col">
-      <Link href={`/${post.slug}`} className="block overflow-hidden mb-4">
-        <div className="relative h-[350px] w-full overflow-hidden">
-          <Image
-            src={image}
-            alt={post.title.rendered}
-            fill
-            className="object-cover hover:scale-105 transition-transform duration-300"
-          />
-        </div>
-      </Link>
-      <div className="flex gap-4 text-sm text-gray-600 mb-3">
-        <span>By {author}</span>
-        <span>{date}</span>
-      </div>
-      <h3 className="font-serif text-xl font-bold text-gray-900 mb-4 leading-snug">
-        <Link href={`/${post.slug}`} className="hover:text-brand-red transition-colors">
-          {post.title.rendered}
-        </Link>
-      </h3>
-      <Link
-        href={`/${post.slug}`}
-        className="text-brand-red font-medium text-sm border-b-2 border-brand-red pb-2 w-fit hover:text-brand-dark hover:border-brand-dark transition-colors mt-auto"
-      >
-        Read More
-      </Link>
-    </article>
-  );
-}
 
 export default async function BlogPage() {
   const [latestPosts, allPosts, totalPages] = await Promise.all([
@@ -61,7 +28,7 @@ export default async function BlogPage() {
       {/* Hero */}
       <section className="py-16 bg-white">
         <div className="max-w-[1300px] mx-auto px-6 lg:px-8">
-          <div className="w-20 h-1 bg-brand-red mb-6"></div>
+          <SectionDivider className="mb-6" />
           <h1 className="font-serif text-4xl lg:text-5xl font-bold">
             My Latest Blog Posts
           </h1>
@@ -128,12 +95,9 @@ export default async function BlogPage() {
                 <p className="text-gray-600 leading-relaxed">
                   Ready to break the internet without breaking a sweat? Let&apos;s turn your digital presence into a podcasting sensation!
                 </p>
-                <Link
-                  href="/contact"
-                  className="inline-block bg-brand-red text-white px-6 py-3 rounded-md hover:bg-brand-dark transition-colors font-medium mt-2"
-                >
+                <Button href="/contact" size="md" className="mt-2">
                   Work with Me
-                </Link>
+                </Button>
               </div>
 
               <div className="bg-brand-black text-white p-12">
