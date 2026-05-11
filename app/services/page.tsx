@@ -27,7 +27,7 @@ type Service = {
 const services: Service[] = [
   {
     title: "6 Weeks Podcast Launch Strategy",
-    price: "$1,500",
+    price: "$2,000",
     description:
       "We will meet weekly for an hour for six weeks. We will set up a day and time that works best for you. This is for you if you're looking to: Launch your podcast but want guidance and weekly feedback. 1:1 weekly support and accountability for launching your podcast. Ready to take action but need extra support.",
     buttonText: "Book Now",
