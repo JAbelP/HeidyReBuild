@@ -58,7 +58,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-gray-800 pt-8 text-center text-sm text-gray-400">
-          © 2024 Heidy De La Cruz. All rights reserved.
+          © 2026 Heidy De La Cruz. All rights reserved.
         </div>
       </div>
     </footer>
