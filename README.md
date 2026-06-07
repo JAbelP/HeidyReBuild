@@ -97,4 +97,4 @@ Configured in [tailwind.config.ts](tailwind.config.ts):
 
 ## License
 
-© 2024 Heidy De La Cruz. All rights reserved.
+© 2026 Heidy De La Cruz. All rights reserved.
