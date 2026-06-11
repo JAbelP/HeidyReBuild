@@ -44,7 +44,7 @@ const services: Service[] = [
     buttonText: "Book a Call",
     buttonHref: "https://stan.store/heidydelacruz/p/book-a-11-call-with-me-hj62a",
     isEmail: false,
-    image: "/images/HDLC4704.jpg",
+    image: "/images/HDLC4704.webp",
     imagePosition: "object-top",
   },
   {
@@ -99,6 +99,7 @@ export default function ServicesPage() {
     <>
       <Navbar />
 
+      <main>
       {/* Hero */}
       <section className="py-24 lg:py-32 bg-white">
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
@@ -110,12 +111,13 @@ export default function ServicesPage() {
             If the chaos of online marketing has left you feeling lost and overlooked, it's time to transform your approach. This is where I come in. As your podcast coach, I specialize in simplifying the podcasting journey, turning your pain points into powerful stepping stones toward success.
           </p>
           {/* Hero image */}
-          <div className="relative aspect-[4/3] w-full max-w-2xl mx-auto rounded-lg overflow-hidden">
+          <div className="relative aspect-[3/4] w-full max-w-2xl mx-auto rounded-lg overflow-hidden">
             <Image
               src="/images/HDLC4829.jpg"
               alt="Heidy De La Cruz – Podcast Coach"
               fill
               className="object-cover object-top"
+              sizes="(max-width: 1024px) 100vw, 672px"
               priority
             />
           </div>
@@ -138,12 +140,13 @@ export default function ServicesPage() {
                 key={service.title}
                 className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow flex flex-col"
               >
-                <div className="relative aspect-video">
+                <div className="relative aspect-[3/4]">
                   <Image
                     src={service.image}
                     alt={service.title}
                     fill
                     className={`object-cover ${service.imagePosition ?? "object-center"}`}
+                    sizes="(max-width: 640px) 100vw, 580px"
                   />
                 </div>
                 <div className="p-8 flex flex-col flex-1">
@@ -177,6 +180,7 @@ export default function ServicesPage() {
 
       <CtaSection heading="Starting a podcast shouldn't be so hard, I'll show you how." />
 
+      </main>
       <Footer />
     </>
   );

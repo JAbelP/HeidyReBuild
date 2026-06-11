@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Button from "../components/Button";
@@ -14,6 +15,7 @@ export default function ContactPage() {
     <>
       <Navbar />
 
+      <main>
       {/* Hero */}
       <section className="pt-16 pb-4 lg:pt-20 lg:pb-6 bg-white text-center">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
@@ -25,11 +27,14 @@ export default function ContactPage() {
           <p className="text-lg lg:text-xl text-gray-700 max-w-2xl mx-auto mb-6">
             Whether you&apos;re a business looking to amplify your brand or a coach exploring new marketing strategies, I&apos;m here to help you get started.
           </p>
-          <div className="w-full max-w-2xl mx-auto rounded-lg overflow-hidden">
-            <img
-              src="/images/HDLC4976.jpg"
+          <div className="relative aspect-[3/2] w-full max-w-2xl mx-auto rounded-lg overflow-hidden">
+            <Image
+              src="/images/HDLC4976.webp"
               alt="Heidy De La Cruz – Contact"
-              className="w-full h-auto object-cover object-top rounded-lg"
+              fill
+              className="object-cover object-top"
+              sizes="(max-width: 1024px) 100vw, 672px"
+              priority
             />
           </div>
         </div>
@@ -102,6 +107,7 @@ export default function ContactPage() {
         </div>
       </section>
 
+      </main>
       <Footer />
     </>
   );

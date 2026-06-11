@@ -25,6 +25,7 @@ export default async function BlogPage() {
     <>
       <Navbar />
 
+      <main>
       {/* Hero */}
       <section className="py-16 bg-white">
         <div className="max-w-[1300px] mx-auto px-6 lg:px-8">
@@ -42,6 +43,7 @@ export default async function BlogPage() {
 
             {/* LEFT - Latest 4 posts in 2-col grid */}
             <div>
+              <h2 className="sr-only">Latest Posts</h2>
               {latestPosts.length > 0 ? (
                 <div className="grid sm:grid-cols-2 gap-x-12 gap-y-16">
                   {latestPosts.map((post) => (
@@ -85,6 +87,7 @@ export default async function BlogPage() {
                   width={800}
                   height={720}
                   className="w-full h-auto"
+                  sizes="(max-width: 1024px) 100vw, 384px"
                 />
               </div>
 
@@ -107,7 +110,9 @@ export default async function BlogPage() {
                 </h3>
                 <p className="text-gray-300 mb-6">I&apos;m all about helping you win.</p>
                 <form className="flex flex-col sm:flex-row gap-0">
+                  <label htmlFor="newsletter-email" className="sr-only">Email Address</label>
                   <input
+                    id="newsletter-email"
                     type="email"
                     placeholder="Email Address"
                     className="flex-1 bg-transparent border border-gray-500 text-white placeholder-gray-500 px-6 py-4 focus:outline-none focus:border-brand-red"
@@ -163,6 +168,7 @@ export default async function BlogPage() {
         </div>
       </section>
 
+      </main>
       <Footer />
     </>
   );

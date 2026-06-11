@@ -4,7 +4,13 @@
       "WebFetch(domain:heidydelacruz.com)",
       "Bash(curl -s \"https://heidydelacruz.com/blog/\")",
       "Bash(curl -L -s \"https://heidydelacruz.com/_static/??-eJx1jdEOgjAMRX/IWsAHnozfMkollW0l6wjh7x1gTEj0rbn33FNcJiCNmWPGyc+DRMNFlTQETsTozDgbkpeN6LzSWACC47qS2QV/KF48AHsOJdMEo2T00u3pM7nAi6bxq7YD79foghBYXj3/N3+sVpzgJTMG7ecyOBVSVjA5Oj3h0mzF7n6Ee922VXNrq7p5AyKjYis=\")",
-      "Bash(npm run build)"
+      "Bash(npm run build)",
+      "Bash(identify public/images/*)",
+      "Bash(awk '{print $1, $3}')",
+      "Bash(file public/images/*)",
+      "Bash(exiftool public/images/*.jpg public/images/*.png)",
+      "Bash(grep -v \"^$\")",
+      "Bash(python3 *)"
     ]
   }
 }

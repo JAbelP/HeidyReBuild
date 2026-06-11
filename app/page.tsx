@@ -27,6 +27,7 @@ export default function Home() {
     <>
       <Navbar />
 
+      <main>
       {/* Hero Section */}
       <section id="home" className="min-h-screen flex items-center bg-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 w-full">
@@ -35,10 +36,11 @@ export default function Home() {
             <div className="order-2 lg:order-1 relative">
               <div className="relative aspect-[3/4] w-full max-w-md mx-auto">
                 <Image
-                  src="/images/HDLC4704.jpg"
+                  src="/images/HDLC4704.webp"
                   alt="Heidy De La Cruz - Hero Photo"
                   fill
                   className="object-cover"
+                  sizes="(max-width: 1024px) 100vw, 448px"
                   priority
                 />
               </div>
@@ -63,7 +65,7 @@ export default function Home() {
       </section>
 
       {/* Marquee Ticker */}
-      <section className="bg-black py-6 overflow-hidden">
+      <section className="bg-black py-6 overflow-hidden" aria-hidden="true">
         <div className="marquee-container">
           <div className="marquee-content">
             <span className="text-white text-2xl font-serif inline-block px-8">
@@ -86,6 +88,7 @@ export default function Home() {
                   alt="Heidy De La Cruz - About Photo"
                   fill
                   className="object-cover rounded-lg"
+                  sizes="(max-width: 1024px) 100vw, 448px"
                 />
               </div>
             </div>
@@ -147,10 +150,11 @@ export default function Home() {
               <div className="grid grid-cols-2 gap-4">
                 <div className="relative aspect-square">
                   <Image
-                    src="/images/HDLC4789.jpg"
+                    src="/images/HDLC4789.webp"
                     alt="Heidy De La Cruz - Collage Photo 1"
                     fill
                     className="object-cover rounded-lg"
+                    sizes="(max-width: 1024px) 50vw, 260px"
                   />
                 </div>
                 <div className="relative aspect-square mt-12">
@@ -159,6 +163,7 @@ export default function Home() {
                     alt="Heidy De La Cruz - Collage Photo 2"
                     fill
                     className="object-cover rounded-lg"
+                    sizes="(max-width: 1024px) 50vw, 260px"
                   />
                 </div>
                 <div className="relative aspect-square -mt-12">
@@ -167,6 +172,7 @@ export default function Home() {
                     alt="Heidy De La Cruz - Collage Photo 3"
                     fill
                     className="object-cover rounded-lg"
+                    sizes="(max-width: 1024px) 50vw, 260px"
                   />
                 </div>
               </div>
@@ -249,6 +255,7 @@ export default function Home() {
                   alt="Heidy De La Cruz - Services Photo"
                   fill
                   className="object-cover rounded-lg"
+                  sizes="(max-width: 1024px) 100vw, 448px"
                 />
               </div>
             </div>
@@ -266,6 +273,7 @@ export default function Home() {
         <CtaSection heading="Starting a podcast shouldn't be so hard, I'll show you how." />
       </div>
 
+      </main>
       <Footer />
     </>
   );

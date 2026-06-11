@@ -32,6 +32,7 @@ export default function AboutPage() {
     <>
       <Navbar />
 
+      <main>
       {/* Hero */}
       <section className="py-24 lg:py-36 bg-gradient-to-br from-brand-dark via-brand-red to-brand-redLight text-white text-center">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
@@ -62,10 +63,11 @@ export default function AboutPage() {
               <div className="absolute -left-6 -top-6 w-full h-full bg-brand-red opacity-10 rounded-lg -z-10"></div>
               <div className="relative aspect-[3/4] w-full max-w-md mx-auto">
                 <Image
-                  src="/images/HDLC4984.jpg"
+                  src="/images/HDLC4984.webp"
                   alt="Heidy De La Cruz"
                   fill
                   className="object-cover rounded-lg"
+                  sizes="(max-width: 1024px) 100vw, 448px"
                   priority
                 />
               </div>
@@ -179,12 +181,13 @@ export default function AboutPage() {
             <div className="hidden lg:block self-start sticky top-8">
               <div className="bg-[#CC0000] rounded-2xl overflow-hidden shadow-2xl">
                 {/* Heidy photo */}
-                <div className="relative w-full" style={{aspectRatio: "4/5"}}>
+                <div className="relative w-full" style={{aspectRatio: "3/4"}}>
                   <Image
                     src="/images/HDLC4829.jpg"
                     alt="Heidy De La Cruz"
                     fill
                     className="object-cover"
+                    sizes="420px"
                   />
                   {/* gradient overlay into red panel */}
                   <div className="absolute inset-x-0 -bottom-7 h-full" style={{background: "linear-gradient(to top, #CC0000 0%, #CC0000 5%, transparent 20%)"}} />
@@ -199,6 +202,7 @@ export default function AboutPage() {
                       alt="The American Dream in the Eyes of Immigrants podcast"
                       fill
                       className="object-cover"
+                      sizes="420px"
                     />
                   </div>
 
@@ -209,6 +213,7 @@ export default function AboutPage() {
                       alt="WWP Awards 2025 Winner"
                       fill
                       className="object-cover"
+                      sizes="420px"
                     />
                   </div>
                 </div>
@@ -231,6 +236,7 @@ export default function AboutPage() {
         testimonials={testimonials}
       />
 
+      </main>
       <Footer />
     </>
   );
