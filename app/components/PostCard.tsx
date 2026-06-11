@@ -31,10 +31,9 @@ export default function PostCard({ post }: { post: WPPost }) {
       </h3>
       <Link
         href={`/${post.slug}`}
-        aria-label={`Read more about ${post.title.rendered}`}
         className="text-brand-red font-medium text-sm border-b-2 border-brand-red pb-2 w-fit hover:text-brand-dark hover:border-brand-dark transition-colors mt-auto"
       >
-        Read More
+        Read More<span className="sr-only"> about {post.title.rendered}</span>
       </Link>
     </article>
   );

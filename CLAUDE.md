@@ -91,3 +91,14 @@ All images live in `public/images/`. Several large RAW-quality JPEGs (3–4MB) a
 
 ## Deployment
 Deployed to Vercel. Push to `main` triggers production deploy. The `vercel.json` file contains any rewrite/header configuration.
+
+## Lighthouse Audit — 2026-06-11
+Ran a full Lighthouse audit (PC + Mobile) on Home, Blog, and Services pages. Original scores: Performance 95–100, Accessibility 88–89, Best Practices 100, SEO 92–100. Five issues were identified and fixed:
+
+1. **`color-contrast`** (`Footer.tsx`) — `text-brand-red` (`#CC0000`) on the black footer background failed WCAG AA for small text (~3.36:1). Changed to `text-red-400` (`#f87171`, ~7.6:1 contrast).
+2. **`link-name`** (`Footer.tsx`) — Social icon links had no accessible name. Added `aria-label` to all six social links; SVGs marked `aria-hidden="true"`.
+3. **`landmark-one-main`** — All page files confirmed to have a `<main>` wrapper.
+4. **`heading-order`** (`app/blog/page.tsx`) — Page jumped from `<h1>` to `<h3>` (PostCard titles), skipping `<h2>`. Added `<h2 className="sr-only">Latest Posts</h2>` before the PostCard grid.
+5. **`link-text` / SEO** (`PostCard.tsx`) — "Read More" links had identical visible text. Added `aria-label={`Read more about ${post.title.rendered}`}` to each link.
+
+Full audit report and before/after scores live in `LightHouseReport/`. A re-test is pending to confirm accessibility rising to 97–100 and blog SEO rising from 92 → 100. Final comparative report will be written to `LightHouseReport/New/` once new JSONs are captured.

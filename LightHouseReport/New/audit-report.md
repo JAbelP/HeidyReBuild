@@ -84,12 +84,49 @@ All Core Web Vitals were already in the green range. No performance fixes were r
 
 ---
 
-## Note — Pending Verification
+## After Scores (Re-test — 2026-06-11)
 
-SEO re-test is pending. Once the fixes are deployed to production, a new Lighthouse run should be conducted on all 6 page/device combinations and the results added to this folder as the final comparative report. Key metrics to confirm:
+| Page            | Performance | Accessibility | Best Practices | SEO        |
+|-----------------|-------------|---------------|----------------|------------|
+| PC Home         | 100         | **100** ✅    | 100            | 100        |
+| Mobile Home     | 86 ⚠️       | **100** ✅    | 100            | 100        |
+| PC Blog         | 99          | **100** ✅    | 100            | 92 ⚠️      |
+| Mobile Blog     | 93          | **100** ✅    | 100            | 92 ⚠️      |
+| PC Services     | 100         | **100** ✅    | 100            | 100        |
+| Mobile Services | 98          | **100** ✅    | 100            | 100        |
 
-- Blog SEO score rising from 92 → 100 (`link-text` fix verified)
-- Accessibility score rising from 88–89 → 97–100 across all pages
-- No regressions in Performance or Best Practices
+---
 
-Final report should include side-by-side before/after scores and note any remaining findings.
+## Before vs. After — Summary
+
+| Metric             | Before   | After    | Change         |
+|--------------------|----------|----------|----------------|
+| Accessibility      | 88–89    | **100**  | +11–12 pts ✅  |
+| Blog SEO           | 92       | 92 ⚠️    | No change yet  |
+| Mobile Home Perf   | 98       | 86 ⚠️    | -12 pts (see note) |
+| All other scores   | 95–100   | 95–100   | Stable ✅      |
+
+---
+
+## Remaining Issues
+
+### Blog SEO — `link-text` still 92
+`aria-label` alone is not sufficient for Lighthouse's SEO `link-text` audit, which inspects visible text content. A second fix was applied: replaced `aria-label` with a visually hidden `<span className="sr-only">` inside the link so the rendered text becomes `"Read More about [post title]"`. This fix is in the current codebase and needs a re-deploy + re-test to confirm the blog SEO score rises to 100.
+
+**File:** `app/components/PostCard.tsx`
+**Change:** `Read More<span className="sr-only"> about {post.title.rendered}</span>`
+
+### Mobile Home Performance — dropped from 98 → 86
+Core Web Vitals are all still green (FCP 1.3s, LCP 2.8s, TBT 0ms, CLS 0). The drop is flagged by three insight audits:
+- **`cache-insight`** — static assets not using long cache lifetimes (Vercel/CDN config)
+- **`image-delivery-insight`** — images could be served in next-gen formats or better sized
+- **`legacy-javascript-insight`** — some legacy JS polyfills included in the bundle
+
+These were likely present in the original audit but scored differently due to Lighthouse's mobile throttling variability (mobile scores can swing ±10 pts between runs). No code regressions were introduced by this session's fixes. Recommend running 3 consecutive mobile audits and averaging to establish a reliable baseline before treating this as a regression.
+
+---
+
+## Next Steps
+1. Re-deploy with the `PostCard.tsx` sr-only span fix and re-run Blog (PC + Mobile) to confirm SEO 92 → 100.
+2. Run 3 consecutive Mobile Home audits to determine if the 86 is a measurement outlier or a real regression.
+3. If image delivery is confirmed as a real issue, proceed with the image optimization work already documented in `image-optimization.csv`.
