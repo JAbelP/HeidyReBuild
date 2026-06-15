@@ -50,9 +50,10 @@ export default function Home() {
             <div className="order-1 lg:order-2 space-y-8">
               <SectionDivider />
               <h1 className="font-serif text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight">
-                Helping Latinas become Podcasters with The V.O.I.C.E Method
+                Podcast Coaching Program That Gets Latinas Launched in 6 Weeks…
               </h1>
               <p className="text-lg lg:text-xl text-gray-700 max-w-xl">
+                Because Your Story Can't Wait Any Longer
                 Ready to break the internet without breaking a sweat? Let's turn your digital presence into a podcasting sensation!
               </p>
               <div className="flex flex-wrap gap-4">
@@ -113,6 +114,134 @@ export default function Home() {
         </div>
       </section>
 
+
+      {/* Story Worth Telling Section */}
+      <section className="py-24 lg:py-32 bg-white">
+        <div className="max-w-4xl mx-auto px-6 lg:px-8">
+          <SectionDivider />
+          <h2 className="font-serif text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight mt-6 mb-10">
+            You Have a Story Worth Telling. So Why Are You Still Waiting to Tell It?
+          </h2>
+          <div className="space-y-5 text-lg text-gray-700 leading-relaxed">
+            <p>
+              You've had the idea. Maybe for months. Maybe longer.
+              You've told yourself you'll start "when you have more time." When things slow down. When you finally figure out the tech. When you feel ready.
+            </p>
+            <p>
+              But here's what no one tells you: the podcasting world is already listening — and right now, there are not nearly enough Latinas behind the mic.
+            </p>
+            <p>
+              Over half of the Hispanic population in the U.S. is already tuned in to podcasts. But the data on how many of us are actually hosting them? It barely exists.
+            </p>
+            <p className="font-semibold text-gray-900">
+              That gap is exactly why I do what I do.
+            </p>
+            <p>
+              The right podcast coaching doesn't hand you a checklist and wish you luck. It walks with you — from the very first idea to a fully launched, professionally produced show without the chaos.
+            </p>
+            <p className="text-xl font-semibold text-gray-900">
+              You don't need more time. You need the right guide.
+            </p>
+          </div>
+
+          {/* Awards */}
+          <div className="mt-12 flex flex-col sm:flex-row gap-6 items-start">
+            <div className="w-full sm:w-1/2 max-w-xs mx-auto sm:mx-0 text-center">
+              <div className="relative aspect-square">
+                <Image
+                  src="/images/The American Dream in  The Eyes of Immigrants .png"
+                  alt="2024 Women in Podcasting Awards — Best Society & Culture Podcast"
+                  fill
+                  className="object-contain"
+                  sizes="(max-width: 640px) 100vw, 320px"
+                />
+              </div>
+              <p className="mt-3 text-sm font-semibold text-gray-900">2024 Women in Podcasting Awards</p>
+              <p className="text-sm text-gray-600">Best Society &amp; Culture Podcast</p>
+            </div>
+            <div className="w-full sm:w-1/2 max-w-xs mx-auto sm:mx-0 text-center">
+              <div className="relative aspect-square">
+                <Image
+                  src="/images/Winner Digital Asset_WWP Awards 2025.png"
+                  alt="2025 Women Who Podcast Award Winner"
+                  fill
+                  className="object-contain"
+                  sizes="(max-width: 640px) 100vw, 320px"
+                />
+              </div>
+              <p className="mt-3 text-sm font-semibold text-gray-900">2025 Women Who Podcast</p>
+              <p className="text-sm text-gray-600">Award Winner</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* V.O.I.C.E. Method Section */}
+      <section className="py-24 lg:py-32 bg-brand-dark text-white">
+        <div className="max-w-5xl mx-auto px-6 lg:px-8">
+          <SectionDivider />
+          <h2 className="font-serif text-4xl lg:text-5xl font-bold mt-6 mb-6">
+            The V.O.I.C.E. Method — Podcast Coaching That Takes You from Idea to Launch in Weeks!
+          </h2>
+          <div className="space-y-4 text-lg text-white/80 leading-relaxed mb-14 max-w-3xl">
+            <p>
+              Most people think launching a podcast is just pressing record and uploading a file. It's not. There's equipment, show format, SEO strategy, platform setup, cover art, content planning — and without a clear system, it gets overwhelming fast.
+            </p>
+            <p>
+              That's why every client goes through the V.O.I.C.E. Method: the proven podcast coaching framework that eliminates the guesswork and gives you a clear, confident path to a published, professional show.
+            </p>
+          </div>
+
+          <div className="space-y-6">
+            {[
+              {
+                letter: "V",
+                name: "Vision",
+                desc: "Your story, your audience, your impact. A podcast without vision is just noise.",
+              },
+              {
+                letter: "O",
+                name: "Outline",
+                desc: "Your show format, episode structure, and content pillars — so you always know what comes next.",
+              },
+              {
+                letter: "I",
+                name: "Implementation",
+                desc: "The tech, the tools, the setup — together, in plain English. No jargon, no panic.",
+              },
+              {
+                letter: "C",
+                name: "Creation",
+                desc: "We record and produce your first episodes. This is where most people quit. Not you.",
+              },
+              {
+                letter: "E",
+                name: "Expansion",
+                desc: "We launch your show and build the marketing strategy that grows your audience from day one.",
+              },
+            ].map(({ letter, name, desc }) => (
+              <div
+                key={letter}
+                className="flex items-start gap-6 border-b border-white/10 pb-6 last:border-0"
+              >
+                <div className="flex-shrink-0 w-14 h-14 bg-brand-red rounded-full flex items-center justify-center">
+                  <span className="font-serif text-2xl font-bold text-white">{letter}</span>
+                </div>
+                <div>
+                  <h3 className="text-xl font-serif font-bold mb-1">{letter} — {name}</h3>
+                  <p className="text-white/75 leading-relaxed">{desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-12">
+            <Button href="https://stan.store/heidydelacruz" variant="outline-white" target="_blank" rel="noopener noreferrer">
+              Join Today!
+            </Button>
+          </div>
+        </div>
+      </section>
 
       {/* So What's the Scoop Section */}
       <section className="py-24 lg:py-32 bg-gradient-to-br from-brand-dark to-brand-red text-white">

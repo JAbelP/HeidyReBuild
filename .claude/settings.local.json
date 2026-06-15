@@ -10,7 +10,13 @@
       "Bash(file public/images/*)",
       "Bash(exiftool public/images/*.jpg public/images/*.png)",
       "Bash(grep -v \"^$\")",
-      "Bash(python3 *)"
+      "Bash(python3 *)",
+      "Read(//mnt/**)",
+      "Read(//media/**)",
+      "Read(//etc/**)",
+      "Bash(lsblk -o NAME,UUID,MOUNTPOINT,SIZE)",
+      "Bash(mount)",
+      "Bash(sudo -n mount -a)"
     ]
   }
 }
