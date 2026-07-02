@@ -177,7 +177,7 @@ export default function Home() {
       </section>
 
       {/* V.O.I.C.E. Method Section */}
-      <section className="py-24 lg:py-32 bg-brand-dark text-white">
+      <section className="py-24 lg:py-32 bg-brand-black text-white">
         <div className="max-w-5xl mx-auto px-6 lg:px-8">
           <SectionDivider />
           <h2 className="font-serif text-4xl lg:text-5xl font-bold mt-6 mb-6">
