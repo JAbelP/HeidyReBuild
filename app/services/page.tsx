@@ -38,7 +38,7 @@ const services: Service[] = [
   },
   {
     title: "One Hour Podcast Strategy Call",
-    price: "$70",
+    price: "$150",
     description:
       "In one hour, we will strategize your next steps in podcasting! Whether growing or starting your show!",
     buttonText: "Book a Call",

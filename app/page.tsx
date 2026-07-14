@@ -9,15 +9,18 @@ import CtaSection from "./components/CtaSection";
 
 const testimonials = [
   {
-    quote: "Heidy is a knowledgeable and engaging host who answered many of my questions about podcasting. Her insights helped me understand the process and feel confident about starting my own show.",
+    quote:
+      "Heidy is a knowledgeable and engaging host who answered many of my questions about podcasting. Her insights helped me understand the process and feel confident about starting my own show.",
     name: "Andrea D.",
   },
   {
-    quote: "This coaching was everything I needed and more to start this journey. Heidy's guidance was clear, practical, and incredibly empowering. I couldn't have asked for a better experience!",
+    quote:
+      "This coaching was everything I needed and more to start this journey. Heidy's guidance was clear, practical, and incredibly empowering. I couldn't have asked for a better experience!",
     name: "Brandell T.",
   },
   {
-    quote: "I got this wild idea to do a podcast, and then the universe sent me Heidy! She was personable, organized, and super supportive. Working with her made the whole process fun and achievable.",
+    quote:
+      "I got this wild idea to do a podcast, and then the universe sent me Heidy! She was personable, organized, and super supportive. Working with her made the whole process fun and achievable.",
     name: "Kimberly Cline",
   },
 ];
@@ -28,380 +31,520 @@ export default function Home() {
       <Navbar />
 
       <main>
-      {/* Hero Section */}
-      <section id="home" className="min-h-screen flex items-center bg-white">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 w-full">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-            {/* Left - Image */}
-            <div className="order-2 lg:order-1 relative">
-              <div className="relative aspect-[3/4] w-full max-w-md mx-auto">
-                <Image
-                  src="/images/HDLC4704.webp"
-                  alt="Heidy De La Cruz - Hero Photo"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 1024px) 100vw, 448px"
-                  priority
-                />
+        {/* Hero Section */}
+        <section id="home" className="min-h-screen flex items-center bg-white">
+          <div className="max-w-7xl mx-auto px-6 lg:px-8 w-full">
+            <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+              {/* Left - Image */}
+              <div className="order-2 lg:order-1 relative">
+                <div className="relative aspect-[3/4] w-full max-w-md mx-auto">
+                  <Image
+                    src="/images/HDLC4704.webp"
+                    alt="Heidy De La Cruz - Hero Photo"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 1024px) 100vw, 448px"
+                    priority
+                  />
+                </div>
+              </div>
+
+              {/* Right - Content */}
+              <div className="order-1 lg:order-2 space-y-8">
+                <SectionDivider />
+                <h1 className="font-serif text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight">
+                  Podcast Coaching Program That Gets Latinas Launched in 6
+                  Weeks…
+                </h1>
+                <p className="text-lg lg:text-xl text-gray-700 max-w-xl">
+                  Because Your Story Can't Wait Any Longer Ready to break the
+                  internet without breaking a sweat? Let's turn your digital
+                  presence into a podcasting sensation!
+                </p>
+                <div className="flex flex-wrap gap-4">
+                  <Button href="#contact">Get In Touch</Button>
+                  <Button href="#about" variant="secondary">
+                    Learn More
+                  </Button>
+                </div>
               </div>
             </div>
+          </div>
+        </section>
 
-            {/* Right - Content */}
-            <div className="order-1 lg:order-2 space-y-8">
-              <SectionDivider />
-              <h1 className="font-serif text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight">
-                Podcast Coaching Program That Gets Latinas Launched in 6 Weeks…
-              </h1>
-              <p className="text-lg lg:text-xl text-gray-700 max-w-xl">
-                Because Your Story Can't Wait Any Longer
-                Ready to break the internet without breaking a sweat? Let's turn your digital presence into a podcasting sensation!
+        {/* Marquee Ticker */}
+        <section className="bg-black py-6 overflow-hidden" aria-hidden="true">
+          <div className="marquee-container">
+            <div className="marquee-content">
+              <span className="text-white text-2xl font-serif inline-block px-8">
+                Let's get your Podcast Launched • Let's get your Podcast
+                Launched • Let's get your Podcast Launched • Let's get your
+                Podcast Launched •
+              </span>
+            </div>
+          </div>
+        </section>
+
+        {/* About Section */}
+        <section id="about" className="py-24 lg:py-32 bg-white">
+          <div className="max-w-7xl mx-auto px-6 lg:px-8">
+            <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+              {/* Left - Image */}
+              <div className="relative">
+                <div className="absolute -left-8 -top-8 w-full h-full bg-brand-red opacity-20 rounded-lg -z-10"></div>
+                <div className="relative aspect-[3/4] w-full max-w-md mx-auto">
+                  <Image
+                    src="/images/RE9A0715_(2048).jpg"
+                    alt="Heidy De La Cruz - About Photo"
+                    fill
+                    className="object-cover rounded-lg"
+                    sizes="(max-width: 1024px) 100vw, 448px"
+                  />
+                </div>
+              </div>
+
+              {/* Right - Content */}
+              <div className="space-y-6">
+                <h2 className="font-serif text-4xl lg:text-5xl font-bold">
+                  Hi I'm,{" "}
+                  <span className="text-brand-red italic">
+                    Heidy De La Cruz
+                  </span>
+                </h2>
+                <p className="text-xl font-medium text-gray-900">
+                  Content Creator & Podcast Coach
+                </p>
+                <p className="text-lg text-gray-700 leading-relaxed">
+                  If the chaos of online marketing has left you feeling lost and
+                  overlooked, it's time to transform your approach. By
+                  harnessing the influential power of podcasting, you can rise
+                  above the noise, captivate your audience, and establish an
+                  unmissable online presence. This is where I come in — I
+                  specialize in simplifying the podcasting journey, turning your
+                  pain points into powerful stepping stones toward success.
+                </p>
+                <h3 className="text-2xl font-serif font-bold text-brand-red pt-4">
+                  Let's Make Podcasting Your Next Adventure!
+                </h3>
+                <Button href="#services" className="mt-4">
+                  More About Me
+                </Button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Story Worth Telling Section */}
+        <section className="py-24 lg:py-32 bg-white">
+          <div className="max-w-4xl mx-auto px-6 lg:px-8">
+            <SectionDivider />
+            <h2 className="font-serif text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight mt-6 mb-10">
+              You Have a Story Worth Telling. So Why Are You Still Waiting to
+              Tell It?
+            </h2>
+            <div className="space-y-5 text-lg text-gray-700 leading-relaxed">
+              <p>
+                You've had the idea. Maybe for months. Maybe longer. You've told
+                yourself you'll start "when you have more time." When things
+                slow down. When you finally figure out the tech. When you feel
+                ready.
               </p>
-              <div className="flex flex-wrap gap-4">
-                <Button href="#contact">Get In Touch</Button>
-                <Button href="#about" variant="secondary">Learn More</Button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Marquee Ticker */}
-      <section className="bg-black py-6 overflow-hidden" aria-hidden="true">
-        <div className="marquee-container">
-          <div className="marquee-content">
-            <span className="text-white text-2xl font-serif inline-block px-8">
-              Let's get your Podcast Launched • Let's get your Podcast Launched • Let's get your Podcast Launched • Let's get your Podcast Launched •
-            </span>
-          </div>
-        </div>
-      </section>
-
-      {/* About Section */}
-      <section id="about" className="py-24 lg:py-32 bg-white">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-            {/* Left - Image */}
-            <div className="relative">
-              <div className="absolute -left-8 -top-8 w-full h-full bg-brand-red opacity-20 rounded-lg -z-10"></div>
-              <div className="relative aspect-[3/4] w-full max-w-md mx-auto">
-                <Image
-                  src="/images/RE9A0715_(2048).jpg"
-                  alt="Heidy De La Cruz - About Photo"
-                  fill
-                  className="object-cover rounded-lg"
-                  sizes="(max-width: 1024px) 100vw, 448px"
-                />
-              </div>
-            </div>
-
-            {/* Right - Content */}
-            <div className="space-y-6">
-              <h2 className="font-serif text-4xl lg:text-5xl font-bold">
-                Hi I'm, <span className="text-brand-red italic">Heidy De La Cruz</span>
-              </h2>
-              <p className="text-xl font-medium text-gray-900">
-                Content Creator & Podcast Coach
+              <p>
+                But here's what no one tells you: the podcasting world is
+                already listening — and right now, there are not nearly enough
+                Latinas behind the mic.
               </p>
-              <p className="text-lg text-gray-700 leading-relaxed">
-                If the chaos of online marketing has left you feeling lost and overlooked, it's time to transform your approach. By harnessing the influential power of podcasting, you can rise above the noise, captivate your audience, and establish an unmissable online presence. This is where I come in — I specialize in simplifying the podcasting journey, turning your pain points into powerful stepping stones toward success.
+              <p>
+                Over half of the Hispanic population in the U.S. is already
+                tuned in to podcasts. But the data on how many of us are
+                actually hosting them? It barely exists.
               </p>
-              <h3 className="text-2xl font-serif font-bold text-brand-red pt-4">
-                Let's Make Podcasting Your Next Adventure!
-              </h3>
-              <Button href="#services" className="mt-4">More About Me</Button>
+              <p className="font-semibold text-gray-900">
+                That gap is exactly why I do what I do.
+              </p>
+              <p>
+                The right podcast coaching doesn't hand you a checklist and wish
+                you luck. It walks with you — from the very first idea to a
+                fully launched, professionally produced show without the chaos.
+              </p>
+              <p className="text-xl font-semibold text-gray-900">
+                You don't need more time. You need the right guide.
+              </p>
             </div>
-          </div>
-        </div>
-      </section>
 
+            {/* Awards */}
 
-      {/* Story Worth Telling Section */}
-      <section className="py-24 lg:py-32 bg-white">
-        <div className="max-w-4xl mx-auto px-6 lg:px-8">
-          <SectionDivider />
-          <h2 className="font-serif text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight mt-6 mb-10">
-            You Have a Story Worth Telling. So Why Are You Still Waiting to Tell It?
-          </h2>
-          <div className="space-y-5 text-lg text-gray-700 leading-relaxed">
-            <p>
-              You've had the idea. Maybe for months. Maybe longer.
-              You've told yourself you'll start "when you have more time." When things slow down. When you finally figure out the tech. When you feel ready.
-            </p>
-            <p>
-              But here's what no one tells you: the podcasting world is already listening — and right now, there are not nearly enough Latinas behind the mic.
-            </p>
-            <p>
-              Over half of the Hispanic population in the U.S. is already tuned in to podcasts. But the data on how many of us are actually hosting them? It barely exists.
-            </p>
-            <p className="font-semibold text-gray-900">
-              That gap is exactly why I do what I do.
-            </p>
-            <p>
-              The right podcast coaching doesn't hand you a checklist and wish you luck. It walks with you — from the very first idea to a fully launched, professionally produced show without the chaos.
-            </p>
-            <p className="text-xl font-semibold text-gray-900">
-              You don't need more time. You need the right guide.
-            </p>
-          </div>
-
-          {/* Awards */}
-          <div className="mt-12 flex flex-col sm:flex-row gap-6 items-start">
-            <div className="w-full sm:w-1/2 max-w-xs mx-auto sm:mx-0 text-center">
-              <div className="relative aspect-square">
-                <Image
-                  src="/images/The American Dream in  The Eyes of Immigrants .png"
-                  alt="2024 Women in Podcasting Awards — Best Society & Culture Podcast"
-                  fill
-                  className="object-contain"
-                  sizes="(max-width: 640px) 100vw, 320px"
-                />
-              </div>
-              <p className="mt-3 text-sm font-semibold text-gray-900">2024 Women in Podcasting Awards</p>
-              <p className="text-sm text-gray-600">Best Society &amp; Culture Podcast</p>
-            </div>
-            <div className="w-full sm:w-1/2 max-w-xs mx-auto sm:mx-0 text-center">
-              <div className="relative aspect-square">
-                <Image
-                  src="/images/Winner Digital Asset_WWP Awards 2025.png"
-                  alt="2025 Women Who Podcast Award Winner"
-                  fill
-                  className="object-contain"
-                  sizes="(max-width: 640px) 100vw, 320px"
-                />
-              </div>
-              <p className="mt-3 text-sm font-semibold text-gray-900">2025 Women Who Podcast</p>
-              <p className="text-sm text-gray-600">Award Winner</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* V.O.I.C.E. Method Section */}
-      <section className="py-24 lg:py-32 bg-brand-black text-white">
-        <div className="max-w-5xl mx-auto px-6 lg:px-8">
-          <SectionDivider />
-          <h2 className="font-serif text-4xl lg:text-5xl font-bold mt-6 mb-6">
-            The V.O.I.C.E. Method — Podcast Coaching That Takes You from Idea to Launch in Weeks!
-          </h2>
-          <div className="space-y-4 text-lg text-white/80 leading-relaxed mb-14 max-w-3xl">
-            <p>
-              Most people think launching a podcast is just pressing record and uploading a file. It's not. There's equipment, show format, SEO strategy, platform setup, cover art, content planning — and without a clear system, it gets overwhelming fast.
-            </p>
-            <p>
-              That's why every client goes through the V.O.I.C.E. Method: the proven podcast coaching framework that eliminates the guesswork and gives you a clear, confident path to a published, professional show.
-            </p>
-          </div>
-
-          <div className="space-y-6">
-            {[
-              {
-                letter: "V",
-                name: "Vision",
-                desc: "Your story, your audience, your impact. A podcast without vision is just noise.",
-              },
-              {
-                letter: "O",
-                name: "Outline",
-                desc: "Your show format, episode structure, and content pillars — so you always know what comes next.",
-              },
-              {
-                letter: "I",
-                name: "Implementation",
-                desc: "The tech, the tools, the setup — together, in plain English. No jargon, no panic.",
-              },
-              {
-                letter: "C",
-                name: "Creation",
-                desc: "We record and produce your first episodes. This is where most people quit. Not you.",
-              },
-              {
-                letter: "E",
-                name: "Expansion",
-                desc: "We launch your show and build the marketing strategy that grows your audience from day one.",
-              },
-            ].map(({ letter, name, desc }) => (
-              <div
-                key={letter}
-                className="flex items-start gap-6 border-b border-white/10 pb-6 last:border-0"
+            <div className="mt-12 flex flex-col sm:flex-row gap-6 items-start">
+              <a
+                href="https://www.heidydelacruz.com/my-podcast-won-an-award"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full sm:w-1/3 max-w-xs mx-auto sm:mx-0 text-center block"
               >
-                <div className="flex-shrink-0 w-14 h-14 bg-brand-red rounded-full flex items-center justify-center">
-                  <span className="font-serif text-2xl font-bold text-white">{letter}</span>
+                <div className="relative aspect-square">
+                  <Image
+                    src="/images/The American Dream in  The Eyes of Immigrants .png"
+                    alt="2024 Women in Podcasting Awards — Best Society & Culture Podcast"
+                    fill
+                    className="object-contain"
+                    sizes="(max-width: 640px) 100vw, 320px"
+                  />
                 </div>
-                <div>
-                  <h3 className="text-xl font-serif font-bold mb-1">{letter} — {name}</h3>
-                  <p className="text-white/75 leading-relaxed">{desc}</p>
+                <p className="mt-3 text-sm font-semibold text-gray-900">
+                  2024 Women in Podcasting Awards
+                </p>
+                <p className="text-sm text-gray-600">
+                  Best Society &amp; Culture Podcast
+                </p>
+              </a>
+              <a
+                href="https://theamericandreampodcast.substack.com/p/the-american-dream-in-the-eyes-of"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full sm:w-1/3 max-w-xs mx-auto sm:mx-0 text-center block"
+              >
+                <div className="relative aspect-square">
+                  <Image
+                    src="/images/Winner Digital Asset_WWP Awards 2025.png"
+                    alt="2025 Women Who Podcast Award Winner"
+                    fill
+                    className="object-contain"
+                    sizes="(max-width: 640px) 100vw, 320px"
+                  />
                 </div>
-              </div>
-            ))}
+                <p className="mt-3 text-sm font-semibold text-gray-900">
+                  2025 Women Who Podcast
+                </p>
+                <p className="text-sm text-gray-600">Award Winner</p>
+              </a>
+              <a
+                href="https://www.entreprenista.com/contributors/heidy-de-la-cruz"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full sm:w-1/3 max-w-xs mx-auto sm:mx-0 text-center block"
+              >
+                <div className="relative aspect-square">
+                  <Image
+                    src="/images/unnamed.png"
+                    alt="Heidy De La Cruz — Entreprenista Contributor"
+                    fill
+                    className="object-contain"
+                    sizes="(max-width: 640px) 100vw, 320px"
+                  />
+                </div>
+                <p className="mt-3 text-sm font-semibold text-gray-900">
+                  Entreprenista
+                </p>
+                <p className="text-sm text-gray-600">Featured Contributor</p>
+              </a>
+            </div>
           </div>
+        </section>
 
-          <div className="mt-12">
-            <Button href="https://stan.store/heidydelacruz" variant="outline-white" target="_blank" rel="noopener noreferrer">
-              Join Today!
-            </Button>
-          </div>
-        </div>
-      </section>
+        {/* V.O.I.C.E. Method Section */}
+        <section className="py-24 lg:py-32 bg-brand-black text-white">
+          <div className="max-w-5xl mx-auto px-6 lg:px-8">
+            <SectionDivider />
+            <h2 className="font-serif text-4xl lg:text-5xl font-bold mt-6 mb-6">
+              The V.O.I.C.E. Method — Podcast Coaching That Takes You from Idea
+              to Launch in Weeks!
+            </h2>
+            <div className="space-y-4 text-lg text-white/80 leading-relaxed mb-14 max-w-3xl">
+              <p>
+                Most people think launching a podcast is just pressing record
+                and uploading a file. It's not. There's equipment, show format,
+                SEO strategy, platform setup, cover art, content planning — and
+                without a clear system, it gets overwhelming fast.
+              </p>
+              <p>
+                That's why every client goes through the V.O.I.C.E. Method: the
+                proven podcast coaching framework that eliminates the guesswork
+                and gives you a clear, confident path to a published,
+                professional show.
+              </p>
+            </div>
 
-      {/* So What's the Scoop Section */}
-      <section className="py-24 lg:py-32 bg-gradient-to-br from-brand-dark to-brand-red text-white">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-            {/* Left - Content */}
             <div className="space-y-6">
-              <h2 className="font-serif text-4xl lg:text-5xl font-bold">
-                What's Holding you Back from Starting?
-              </h2>
-              <div className="space-y-4 text-lg leading-relaxed">
-                <p>
-                  I'm not just a coach; I'm a creator, storyteller, and advocate for authentic voices. Through my podcast, <span className="font-bold">"The American Dream In The Eyes of Immigrants,"</span> I explore powerful stories that inspire and connect communities.
-                </p>
-                <p>
-                  My poetry book, <span className="font-bold">"Words From The Heart,"</span> reflects my passion for meaningful expression, while my Substack, <span className="font-bold">"Into My Thoughts,"</span> gives you a peek into the ideas and insights that fuel my creative journey.
-                </p>
-                <p>
-                  I believe in the transformative power of podcasting to build connections, share stories, and create impact. Let's work together to amplify your voice and make your mark in the podcasting world.
-                </p>
-              </div>
+              {[
+                {
+                  letter: "V",
+                  name: "Vision",
+                  desc: "Your story, your audience, your impact. A podcast without vision is just noise.",
+                },
+                {
+                  letter: "O",
+                  name: "Outline",
+                  desc: "Your show format, episode structure, and content pillars — so you always know what comes next.",
+                },
+                {
+                  letter: "I",
+                  name: "Implementation",
+                  desc: "The tech, the tools, the setup — together, in plain English. No jargon, no panic.",
+                },
+                {
+                  letter: "C",
+                  name: "Creation",
+                  desc: "We record and produce your first episodes. This is where most people quit. Not you.",
+                },
+                {
+                  letter: "E",
+                  name: "Expansion",
+                  desc: "We launch your show and build the marketing strategy that grows your audience from day one.",
+                },
+              ].map(({ letter, name, desc }) => (
+                <div
+                  key={letter}
+                  className="flex items-start gap-6 border-b border-white/10 pb-6 last:border-0"
+                >
+                  <div className="flex-shrink-0 w-14 h-14 bg-brand-red rounded-full flex items-center justify-center">
+                    <span className="font-serif text-2xl font-bold text-white">
+                      {letter}
+                    </span>
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-serif font-bold mb-1">
+                      {letter} — {name}
+                    </h3>
+                    <p className="text-white/75 leading-relaxed">{desc}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div className="mt-12">
               <Button
-                href="https://quiz.tryinteract.com/#/69779e8fd55a23ed54af415e"
+                href="https://stan.store/heidydelacruz"
                 variant="outline-white"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-4"
               >
-                Take The Quiz
+                Join Today!
               </Button>
             </div>
-
-            {/* Right - Image Collage */}
-            <div className="relative">
-              <div className="grid grid-cols-2 gap-4">
-                <div className="relative aspect-square">
-                  <Image
-                    src="/images/HDLC4789.webp"
-                    alt="Heidy De La Cruz - Collage Photo 1"
-                    fill
-                    className="object-cover rounded-lg"
-                    sizes="(max-width: 1024px) 50vw, 260px"
-                  />
-                </div>
-                <div className="relative aspect-square mt-12">
-                  <Image
-                    src="/images/collage-2.png"
-                    alt="Heidy De La Cruz - Collage Photo 2"
-                    fill
-                    className="object-cover rounded-lg"
-                    sizes="(max-width: 1024px) 50vw, 260px"
-                  />
-                </div>
-                <div className="relative aspect-square -mt-12">
-                  <Image
-                    src="/images/collage-3.png"
-                    alt="Heidy De La Cruz - Collage Photo 3"
-                    fill
-                    className="object-cover rounded-lg"
-                    sizes="(max-width: 1024px) 50vw, 260px"
-                  />
-                </div>
-              </div>
-              <div className="absolute -bottom-8 -right-8 w-32 h-32 bg-brand-red opacity-80 -z-10"></div>
-            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Services Section */}
-      <section id="services" className="py-24 lg:py-32 bg-white">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-            {/* Left - Content */}
-            <div className="space-y-8">
-              <h2 className="font-serif text-4xl lg:text-5xl font-bold">
-                How Can I <span className="italic text-brand-red">Help</span> You?
-              </h2>
-
-              {/* Service 1 */}
-              <div className="border-b border-brand-red pb-8">
-                <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-10 h-10 bg-brand-red rounded-full flex items-center justify-center mt-1">
-                    <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h3 className="text-2xl font-serif font-bold mb-3">Strategic Planning</h3>
-                    <p className="text-gray-700 leading-relaxed">
-                      Together, we'll outline a customized podcasting strategy tailored to your unique goals and audience. From concept development to content planning, I'll help you build a solid foundation for success.
-                    </p>
-                  </div>
+        {/* So What's the Scoop Section */}
+        <section className="py-24 lg:py-32 bg-gradient-to-br from-brand-dark to-brand-red text-white">
+          <div className="max-w-7xl mx-auto px-6 lg:px-8">
+            <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+              {/* Left - Content */}
+              <div className="space-y-6">
+                <h2 className="font-serif text-4xl lg:text-5xl font-bold">
+                  What's Holding you Back from Starting?
+                </h2>
+                <div className="space-y-4 text-lg leading-relaxed">
+                  <p>
+                    I'm not just a coach; I'm a creator, storyteller, and
+                    advocate for authentic voices. Through my podcast,{" "}
+                    <span className="font-bold">
+                      "The American Dream In The Eyes of Immigrants,"
+                    </span>{" "}
+                    I explore powerful stories that inspire and connect
+                    communities.
+                  </p>
+                  <p>
+                    My poetry book,{" "}
+                    <span className="font-bold">"Words From The Heart,"</span>{" "}
+                    reflects my passion for meaningful expression, while my
+                    Substack,{" "}
+                    <span className="font-bold">"Into My Thoughts,"</span> gives
+                    you a peek into the ideas and insights that fuel my creative
+                    journey.
+                  </p>
+                  <p>
+                    I believe in the transformative power of podcasting to build
+                    connections, share stories, and create impact. Let's work
+                    together to amplify your voice and make your mark in the
+                    podcasting world.
+                  </p>
                 </div>
+                <Button
+                  href="https://quiz.tryinteract.com/#/69779e8fd55a23ed54af415e"
+                  variant="outline-white"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-4"
+                >
+                  Take The Quiz
+                </Button>
               </div>
 
-              {/* Service 2 */}
-              <div className="border-b border-brand-red pb-8">
-                <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-10 h-10 bg-brand-red rounded-full flex items-center justify-center mt-1">
-                    <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                    </svg>
+              {/* Right - Image Collage */}
+              <div className="relative">
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="relative aspect-square">
+                    <Image
+                      src="/images/HDLC4789.webp"
+                      alt="Heidy De La Cruz - Collage Photo 1"
+                      fill
+                      className="object-cover rounded-lg"
+                      sizes="(max-width: 1024px) 50vw, 260px"
+                    />
                   </div>
-                  <div>
-                    <h3 className="text-2xl font-serif font-bold mb-3">Effortless Execution</h3>
-                    <p className="text-gray-700 leading-relaxed">
-                      I'll guide you through the process step by step, from recording your first episode to launching your podcast on major platforms. No technical overwhelm, just clear guidance and support.
-                    </p>
+                  <div className="relative aspect-square mt-12">
+                    <Image
+                      src="/images/collage-2.png"
+                      alt="Heidy De La Cruz - Collage Photo 2"
+                      fill
+                      className="object-cover rounded-lg"
+                      sizes="(max-width: 1024px) 50vw, 260px"
+                    />
+                  </div>
+                  <div className="relative aspect-square -mt-12">
+                    <Image
+                      src="/images/collage-3.png"
+                      alt="Heidy De La Cruz - Collage Photo 3"
+                      fill
+                      className="object-cover rounded-lg"
+                      sizes="(max-width: 1024px) 50vw, 260px"
+                    />
                   </div>
                 </div>
-              </div>
-
-              {/* Service 3 */}
-              <div className="pb-8">
-                <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-10 h-10 bg-brand-red rounded-full flex items-center justify-center mt-1">
-                    <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h3 className="text-2xl font-serif font-bold mb-3">Effective Marketing</h3>
-                    <p className="text-gray-700 leading-relaxed">
-                      I'll equip you with marketing strategies to promote your podcast, grow your audience, and maximize your impact. Learn how to leverage social media, SEO, and community building to reach your ideal listeners.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <Button href="#contact" className="mt-4">Yes, I'm Ready!</Button>
-            </div>
-
-            {/* Right - Image */}
-            <div className="relative">
-              <div className="absolute -right-8 top-1/2 -translate-y-1/2 w-64 h-64 bg-brand-red opacity-20 -z-10"></div>
-              <div className="relative aspect-[3/4] w-full max-w-md mx-auto">
-                <Image
-                  src="/images/services-photo.png"
-                  alt="Heidy De La Cruz - Services Photo"
-                  fill
-                  className="object-cover rounded-lg"
-                  sizes="(max-width: 1024px) 100vw, 448px"
-                />
+                <div className="absolute -bottom-8 -right-8 w-32 h-32 bg-brand-red opacity-80 -z-10"></div>
               </div>
             </div>
           </div>
+        </section>
+
+        {/* Services Section */}
+        <section id="services" className="py-24 lg:py-32 bg-white">
+          <div className="max-w-7xl mx-auto px-6 lg:px-8">
+            <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+              {/* Left - Content */}
+              <div className="space-y-8">
+                <h2 className="font-serif text-4xl lg:text-5xl font-bold">
+                  How Can I <span className="italic text-brand-red">Help</span>{" "}
+                  You?
+                </h2>
+
+                {/* Service 1 */}
+                <div className="border-b border-brand-red pb-8">
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 w-10 h-10 bg-brand-red rounded-full flex items-center justify-center mt-1">
+                      <svg
+                        className="w-5 h-5 text-white"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"
+                        />
+                      </svg>
+                    </div>
+                    <div>
+                      <h3 className="text-2xl font-serif font-bold mb-3">
+                        Strategic Planning
+                      </h3>
+                      <p className="text-gray-700 leading-relaxed">
+                        Together, we'll outline a customized podcasting strategy
+                        tailored to your unique goals and audience. From concept
+                        development to content planning, I'll help you build a
+                        solid foundation for success.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Service 2 */}
+                <div className="border-b border-brand-red pb-8">
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 w-10 h-10 bg-brand-red rounded-full flex items-center justify-center mt-1">
+                      <svg
+                        className="w-5 h-5 text-white"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M13 10V3L4 14h7v7l9-11h-7z"
+                        />
+                      </svg>
+                    </div>
+                    <div>
+                      <h3 className="text-2xl font-serif font-bold mb-3">
+                        Effortless Execution
+                      </h3>
+                      <p className="text-gray-700 leading-relaxed">
+                        I'll guide you through the process step by step, from
+                        recording your first episode to launching your podcast
+                        on major platforms. No technical overwhelm, just clear
+                        guidance and support.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Service 3 */}
+                <div className="pb-8">
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 w-10 h-10 bg-brand-red rounded-full flex items-center justify-center mt-1">
+                      <svg
+                        className="w-5 h-5 text-white"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z"
+                        />
+                      </svg>
+                    </div>
+                    <div>
+                      <h3 className="text-2xl font-serif font-bold mb-3">
+                        Effective Marketing
+                      </h3>
+                      <p className="text-gray-700 leading-relaxed">
+                        I'll equip you with marketing strategies to promote your
+                        podcast, grow your audience, and maximize your impact.
+                        Learn how to leverage social media, SEO, and community
+                        building to reach your ideal listeners.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <Button href="#contact" className="mt-4">
+                  Yes, I'm Ready!
+                </Button>
+              </div>
+
+              {/* Right - Image */}
+              <div className="relative">
+                <div className="absolute -right-8 top-1/2 -translate-y-1/2 w-64 h-64 bg-brand-red opacity-20 -z-10"></div>
+                <div className="relative aspect-[3/4] w-full max-w-md mx-auto">
+                  <Image
+                    src="/images/services-photo.png"
+                    alt="Heidy De La Cruz - Services Photo"
+                    fill
+                    className="object-cover rounded-lg"
+                    sizes="(max-width: 1024px) 100vw, 448px"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <div id="testimonials">
+          <Testimonials testimonials={testimonials} />
         </div>
-      </section>
 
-      <div id="testimonials">
-        <Testimonials testimonials={testimonials} />
-      </div>
+        <PodcastersChecklist />
 
-      <PodcastersChecklist />
-
-      <div id="contact">
-        <CtaSection heading="Starting a podcast shouldn't be so hard, I'll show you how." />
-      </div>
-
+        <div id="contact">
+          <CtaSection heading="Starting a podcast shouldn't be so hard, I'll show you how." />
+        </div>
       </main>
       <Footer />
     </>
